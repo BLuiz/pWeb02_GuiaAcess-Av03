@@ -1,0 +1,2 @@
+o que está sendo usaodo é o assets;
+pelo o que testei o assets2 não está sendo usado porém tive receio de excluir;
