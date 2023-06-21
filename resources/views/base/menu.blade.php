@@ -24,7 +24,14 @@
                 <!--necessário fazer rotas e paginas-->
                 <li class="nav-item px-2"><a class="nav-link" href="{{ url('/to FIX') }}">Onde ir</a></li>
                 <li class="nav-item px-2"><a class="nav-link" href="{{ action('App\Http\Controllers\LocalController@create') }}">Participe</a></li>
-                <li class="nav-item px-2"><a class="nav-link" href="{{ url('/to FIX') }}">Suporte</a></li>
+                <!--menu do suporte-->
+                <li class="nav-item px-2 dropdown active">
+                    <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Suporte</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\SuporteController@create') }}">Dúvidas</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/suporte') }}">FAQ</a></li>
+                    </ul>
+                </li>
 
                 <!--Botão de perfil - logoff-->
                 <li class="nav-item px-2">

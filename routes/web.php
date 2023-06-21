@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\LocalController;
+use App\Http\Controllers\SuporteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +45,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('local', LocalController::class);
     Route::post('local/search', [LocalController::class, 'search'])->name(
         'local.search'
+    );
+
+    Route::resource('suporte', SuporteController::class);
+    Route::post('suporte/search', [SuporteController::class, 'search'])->name(
+        'suporte.search'
     );
 });
 
