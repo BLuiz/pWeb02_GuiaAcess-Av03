@@ -36,7 +36,7 @@
             </div>
             <label class="form-label">Assinale:</label><br>
 
-            <input type="radio" name="contact" id="contact_autorizo" value="autorizo" required/>
+            <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
             <label for="contact_email">Eu concordo com a premissa do projeto e autoriza todas as suas diretrizes.</label>
 
             <input type="hidden" name="id"
@@ -56,7 +56,7 @@
             <input type="email" class="form-control" name="emailempresa"
                 value="@if (!empty(old('emailempresa'))) {{ old('emailempresa') }} @elseif(!empty($local->emailempresa)) {{ $local->emailempresa }} @else {{ '' }} @endif" /><br>
         </div>
-        
+
         @php
             $nome_imagem = !empty($local->imagem) ? $local->imagem : 'sem_imagem.jpg';
         @endphp
@@ -70,8 +70,74 @@
             <i class="fa-solid fa-save"></i> Salvar
         </button>
 
+
+        <div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <h3>Leis e o formulário:</h3>
+            <p>A partir daqui, você e/ou sua empresa vão responder uma série de perguntas sobre a acessibilidade do seu estabelecimento segundo as leis do Estado e município, o códigos de obra, plano diretor e as normas da ABNT.
+
+                Normas da ABNT:
+                http://acessibilidade.unb.br/images/PDF/NORMA_NBR-9050.pdf
+
+                Código de obras:
+                https://leismunicipais.com.br/codigo-de-obras-chapeco-sc
+
+                Plano diretor:
+                https://leismunicipais.com.br/plano-diretor-chapeco-sc</p>
+        </div>
+
+        <div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <h3>A Lei no 11.126, Art. 1o, diz que a pessoa com deficiência visual usuária de cão-guia tem o direito de ingressar e permanecer com o animal em todos os locais públicos ou privados de uso coletivo.  Assinale o que condiz com seu estabelecimento. </h3>
+        </div>
+        <label class="form-label">Assinale:</label><br>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email">Meu estabelecimento tem acesso a cão-guia.</label>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email">Meu estabelecimento condiz com a norma 10.3.5 da ABNT, onde o espaço para o cão-guia - Deve ser previsto um espaço para cão-guia junto de um assento preferencial, com dimensões de 0,70 m de comprimento, 0,40 m de profundidade e 0,30 m de altura.</label>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email">Meu estabelecimento não tem acesso a cão-guia.</label>
+
+
+
+        <div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <h3>Leis e o formulário:</h3>
+            <p>A partir daqui, você e/ou sua empresa vão responder uma série de perguntas sobre a acessibilidade do seu estabelecimento segundo as leis do Estado e município, o códigos de obra, plano diretor e as normas da ABNT.
+
+                Normas da ABNT:
+                http://acessibilidade.unb.br/images/PDF/NORMA_NBR-9050.pdf
+
+                Código de obras:
+                https://leismunicipais.com.br/codigo-de-obras-chapeco-sc
+
+                Plano diretor:
+                https://leismunicipais.com.br/plano-diretor-chapeco-sc</p>
+        </div>
+
+        <div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <h3>A Lei no 11.126, Art. 1o, diz que a pessoa com deficiência visual usuária de cão-guia tem o direito de ingressar e permanecer com o animal em todos os locais públicos ou privados de uso coletivo.  Assinale o que condiz com seu estabelecimento. </h3>
+        </div>
+        <label class="form-label">Assinale:</label><br>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email">Meu estabelecimento tem acesso a cão-guia.</label>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email">Meu estabelecimento condiz com a norma 10.3.5 da ABNT, onde o espaço para o cão-guia - Deve ser previsto um espaço para cão-guia junto de um assento preferencial, com dimensões de 0,70 m de comprimento, 0,40 m de profundidade e 0,30 m de altura.</label>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email">Meu estabelecimento não tem acesso a cão-guia.</label>
+
+        <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>
+        <label for="contact_email"></label>
+
+
+
             <a href='{{ route('local.index') }}' class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i>
                 Voltar</a> <br><br>
+
+
         </form>
     </div>
 </div>
