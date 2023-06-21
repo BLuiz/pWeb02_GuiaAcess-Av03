@@ -39,6 +39,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name(
         'profile.destroy'
     );
+
+    Route::resource('local', LocalController::class);
+    Route::post('local/search', [LocalController::class, 'search'])->name(
+        'local.search'
+    );
 });
+
+
 
 require __DIR__ . '/auth.php';

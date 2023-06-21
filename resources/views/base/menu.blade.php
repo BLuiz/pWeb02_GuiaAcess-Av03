@@ -22,9 +22,9 @@
                     </ul>
                 </li>
                 <!--necessário fazer rotas e paginas-->
-                <li class="nav-item px-2"><a class="nav-link disabled" href="{{ url('/to FIX') }}">Onde ir</a></li>
-                <li class="nav-item px-2"><a class="nav-link disabled" href="{{ url('/to FIX') }}">Participe</a></li>
-                <li class="nav-item px-2"><a class="nav-link disabled" href="{{ url('/to FIX') }}">Suporte</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="{{ url('/to FIX') }}">Onde ir</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="{{ action('App\Http\Controllers\LocalController@create') }}">Participe</a></li>
+                <li class="nav-item px-2"><a class="nav-link" href="{{ url('/to FIX') }}">Suporte</a></li>
 
                 <!--Botão de perfil - logoff-->
                 <li class="nav-item px-2">

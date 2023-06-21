@@ -13,14 +13,14 @@ class LocalController extends Controller
     {
         $locals = Local::All();
 
-        return view('LocalList')->with(['locals' => $locals]);      //verificar nome do arquivo LocalList.php
+        return view('UsuarioList')->with(['locals' => $locals]);      //verificar nome do arquivo LocalList.php
     }
 
     function create()
     {
         $categorias = Categoria::orderBy('nome')->get();
         //dd($categorias);
-        return view('LocalForm');                                    //->with(['categorias' => $categorias]);
+        return view('ParticipeForm');                                    //->with(['categorias' => $categorias]);
     }
 
     function store(Request $request)
@@ -41,15 +41,15 @@ class LocalController extends Controller
 
         $imagem = $request->file('imagem');
         $nome_arquivo = '';
-        
-        
+
+
         if ($imagem) {                  //verifica existência de imagem
             $nome_arquivo = date('YmdHis') . '.' . $imagem->getClientOriginalExtension();
 
             $diretorio = 'imagem/';     //salva a imagem em uma pasta
 
             $imagem->storeAs($diretorio, $nome_arquivo, 'public');
-            
+
             $dados['imagem'] = $diretorio . $nome_arquivo;
         }
 
@@ -66,7 +66,7 @@ class LocalController extends Controller
 
         //$categorias = Categoria::orderBy('nome')->get();      //se tiver alguma chave estrangeira
 
-        return view('LocalForm')->with([
+        return view('ParticipeForm')->with([
             'local' => $local,
             //'categorias' => $categorias                      //se tiver alguma chave estrangeira
         ]);
@@ -76,10 +76,10 @@ class LocalController extends Controller
     {
         //select * from local where id = $id;
         $local = Local::findOrFail($id);
-        
+
         //$categorias = Categoria::orderBy('nome')->get();      //se tiver alguma chave estrangeira
 
-        return view('LocalForm')->with([
+        return view('ParticipeForm')->with([
             'local' => $local,
             //'categorias' => $categorias,                      //se tiver alguma chave estrangeira
         ]);
@@ -91,7 +91,7 @@ class LocalController extends Controller
             Local::rules(),
             Local::messages()
         );
-        
+
         //adiciono os dados do formulário ao vetor
         $dados = [
             'nome'          => $request->nome,
