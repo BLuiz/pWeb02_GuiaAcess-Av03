@@ -16,6 +16,8 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
+        //$fake recebe nomes criados pela classe Faker
+        //poderia ser um vetor com nomes, valores, etc
         $fake = Faker::create("pt_BR");
         foreach(\range(1,5) as $index){
             DB::table('categoria')->insert(
