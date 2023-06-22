@@ -3,33 +3,32 @@
 @section('conteudo')
 @section('tituloPagina', 'Listagem de Locais')
 
+
 <h1>Listagem de Locais</h1>
 
 <!--Início Busca-->
+
 <form action="{{ route('local.search') }}" method="post">
     @csrf
     <div class="row">
         <div class="col-2">
-            <select name="campo" class="form-select">
-                <option value="nome">Nome</option>
-                <option value="telefone">Telefone</option>
-            </select>
+            <input type="checkbox" name="campo" value="nome"><label for="campo">Nome</label><br>
+            <input type="checkbox" name="campo" value="telefone"><label for="campo">Telefone</label><br>
         </div>
         <div class="col-4">
-            <input type="text" class="form-control" placeholder="Pesquisar" name="valor" />
+        <input type="text" class="form-control" placeholder="Pesquisar" name="valor" />
         </div>
         <div class="col-6">
             <button class="btn btn-primary" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i> Buscar
+            <i class="fa-solid fa-magnifying-glass"></i> Buscar
             </button>
             <a class="btn btn-success" href="{{ action('App\Http\Controllers\LocalController@create') }}"><i
-                    class="fa-solid fa-plus"></i> Cadastrar</a>
+                class="fa-solid fa-plus"></i> Cadastrar</a>
         </div>
     </div>
 </form>
+
 <!--Fim Busca-->
-
-
 
 <!--Início Listagem-->
 <table class="table table-striped table-hover">

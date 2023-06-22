@@ -143,7 +143,14 @@ class LocalController extends Controller
                 'like',
                 '%' . $request->valor . '%'
             )->get();
-        } else {
+        }else if ($request->campo == 'telefone') {
+            $locals = Local::where(
+                'telefone',
+                'like',
+                '%' . $request->valor . '%'
+            )->get();
+        }
+        else {
             $locals = Local::all();
         }
 
