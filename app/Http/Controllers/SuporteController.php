@@ -18,7 +18,7 @@ class SuporteController extends Controller
 
     function create()
     {
-        $categorias = Categoria::orderBy('nome')->get();
+        //$categorias = Categoria::orderBy('nome')->get();
         //dd($categorias);
         return view('SuporteForm');                                    //->with(['categorias' => $categorias]);
     }

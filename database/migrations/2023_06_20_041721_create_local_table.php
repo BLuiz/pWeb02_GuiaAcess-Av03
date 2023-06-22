@@ -20,9 +20,11 @@ return new class extends Migration
             $table->string('telefone', 20);
             $table->string('coordenada', 40);
             $table->string('imagem', 150)->nullable();
-            $table->string('acessibilidade', 20); //vetor?
+            $table->json('acessibilidade')->nullable();
+         //   $table->string('acessibilidade', 20); //vetor?
             $table->timestamps();
         });
+        /*
         Schema::disableForeignKeyConstraints();
 
         Schema::create('local_acessibilidade', function (Blueprint $table) {
@@ -32,6 +34,7 @@ return new class extends Migration
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();
+        */
 
     }
 

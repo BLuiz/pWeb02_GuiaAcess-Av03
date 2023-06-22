@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\SuporteController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,15 +24,18 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('base.dashboard');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+})->middleware(['auth', 'verified'])->name(
+    'dashboard'
+);
 
 Route::middleware('auth')->group(function () {
+    //Usuário
     Route::resource('usuario', UsuarioController::class);
     Route::post('usuario/search', [UsuarioController::class, 'search'])->name(
         'usuario.search'
-    );
+    );//
+
+    //Conta
     Route::get('/profile', [ProfileController::class, 'edit'])->name(
         'profile.edit'
     );
@@ -40,19 +44,20 @@ Route::middleware('auth')->group(function () {
     );
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name(
         'profile.destroy'
-    );
+    );//
 
+    //Local
     Route::resource('local', LocalController::class);
     Route::post('local/search', [LocalController::class, 'search'])->name(
         'local.search'
-    );
 
+    );//
+
+    //Suporte
     Route::resource('suporte', SuporteController::class);
     Route::post('suporte/search', [SuporteController::class, 'search'])->name(
         'suporte.search'
-    );
+    );//
 });
-
-
 
 require __DIR__ . '/auth.php';

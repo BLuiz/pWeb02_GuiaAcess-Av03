@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('mensagem', 999);
             $table->timestamps();
         });
-        Schema::disableForeignKeyConstraints();
     }
 
     /**

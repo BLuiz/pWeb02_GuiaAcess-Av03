@@ -13,12 +13,12 @@ class LocalController extends Controller
     {
         $locals = Local::All();
 
-        return view('UsuarioList')->with(['locals' => $locals]);      //verificar nome do arquivo LocalList.php
+        return view('LocalList')->with(['locals' => $locals]);      //verificar nome do arquivo LocalList.php
     }
 
     function create()
     {
-        $categorias = Categoria::orderBy('nome')->get();
+        //$categorias = Categoria::orderBy('nome')->get();
         //dd($categorias);
         return view('ParticipeForm');                                    //->with(['categorias' => $categorias]);
     }

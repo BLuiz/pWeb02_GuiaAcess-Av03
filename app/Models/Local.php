@@ -11,9 +11,15 @@ class Local extends Model
     protected $table = "local";
 
     protected $fillable = [
-        'nome', 'descricao', 'contato', 'coordenada', 'imagem','acessibilidade', //vetor?
-        'avaliacao', 'comentario'
+        'nome', 'descricao', 'telefone', 'coordenada', 'imagem','acessibilidade'
     ];
+    protected function acessibilidade(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => json_decode($value, true),
+            set: fn ($value) => json_encode($value),
+        );
+    }
 
     public static function rules(){
         return  [
@@ -22,9 +28,9 @@ class Local extends Model
             'telefone'      => 'required | max: 20',
             'coordenada'    => 'required | max: 20',
             'imagem'        => 'required | image | mimes:jpeg,jpg,png | max:2048',
-            'acessibilidade'=> 'required', //?
+            'acessibilidade'=> 'nullable', //?
             /*
-            'avaliacao'     => 'nullable', 
+            'avaliacao'     => 'nullable',
             'comentario'    => 'nullable'
             */
         ];
@@ -36,7 +42,6 @@ class Local extends Model
             'telefone.required'         => 'O telefone é obrigatório',
             'coordenada.required'       => 'As coordenadas são obrigatórias',
             'imagem.required'           => 'O imagem é obrigatória',
-            'acessibilidade.required'   => 'A acessibilidade é obrigatória',
 
             'nome.max'                  => 'Só é permitido 50 caracteres',
             'descricao.max'             => 'Só é permitido 200 caracteres',
