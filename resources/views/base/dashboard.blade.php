@@ -23,7 +23,7 @@
             </div>
             </div>
             <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-            <img src="../assets/img/hero2-img.png" class="img-fluid animated" alt="">
+            <img src="{{ url('assets/img/hero2-img.png')}}" class="img-fluid animated" alt="">
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@
 
         <div class="row content">
         <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="../assets/img/undraw_acessbility.png" class="img-fluid" alt="">
+            <img src="{{ url('assets/img/undraw_acessbility.png')}}')}}" class="img-fluid" alt="">
         </div>
         <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>A importância da Acessibilidade nas ruas de Chapecó</h3>
@@ -148,7 +148,7 @@
 
         <div class="row content">
         <div class="col-md-4" data-aos="fade-right">
-            <img src="../assets/img/details-1.png" class="img-fluid sizeimg" alt="">
+            <img src="{{ url('assets/img/details-1.png')}}')}}" class="img-fluid" alt="">
         </div>
         <div id="origem" class="col-md-8 pt-4" data-aos="fade-up">
             <h3>Quem somos e como o projeto teve início?</h3>
@@ -162,7 +162,7 @@
 
         <div class="row content" id="publico">
         <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="../assets/img/details-4.png" class="img-fluid" alt="" width="80%">
+            <img src="{{ url('assets/img/details-4.png')}}" class="img-fluid" alt="" width="80%">
         </div>
         <div id="desenvolvimento" class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>Para quem esse site foi desenvolvido?</h3>
@@ -180,7 +180,7 @@
 
         <div class="row content">
         <div class="col-md-4" data-aos="fade-right">
-            <img src="../assets/img/details-3.png" class="img-fluid" alt="">
+            <img src="{{ url('assets/img/details-3.png')}}" class="img-fluid" alt="">
         </div>
         <div class="col-md-8 pt-5" data-aos="fade-up">
             <h3>Sobre o desenvolvimento do projeto </h3>
@@ -212,7 +212,7 @@
 
         <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pic"><img src="../assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="{{ url('assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
             <div class="member-info">
                 <h4>Bernardo Augusto Picoli</h4>
                 <span>Programador e Desenvolvedor</span>
@@ -228,7 +228,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pic"><img src="../assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
             <div class="member-info">
                 <h4>João Vitor de Carvalho</h4>
                 <span>Pesquisador</span>
@@ -244,7 +244,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pic"><img src="../assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
             <div class="member-info">
                 <h4>Luiz Gustavo Piuco Bazzotti</h4>
                 <span>Programador e Desenvolvedor</span>
@@ -260,7 +260,7 @@
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pic"><img src="../assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+            <div class="pic"><img src="{{ url('assets/img/team/team-4.jpg')}}" class="img-fluid" alt=""></div>
             <div class="member-info">
                 <h4>Mariana Matoso Gielda</h4>
                 <span>Pesquisadora</span>
@@ -281,5 +281,6 @@
 
     </main><!-- End #main -->
 </div>
+
 
 @endsection

@@ -36,7 +36,7 @@
                         <li><a class="dropdown-item disabled" href="{{ url('/index#origem') }}">Mapa?</a></li>
                     </ul>
                 </li>
-                
+
                 <li class="nav-item px-2 dropdown active">
                     <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Suporte
@@ -67,7 +67,7 @@
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#"> <i class='fas fa-user-cog'></i> Perfil</a>   <!--Página de perfil?-->
-                                <a class="dropdown-item" href="#"><i class='fas fa-cog'></i> Configurações</a> 
+                                <a class="dropdown-item" href="#"><i class='fas fa-cog'></i> Configurações</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class='fas fa-sign-out-alt'></i> {{ __('Logout') }}
