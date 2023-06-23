@@ -22,22 +22,20 @@
     </div>
     -->
     <div class="container">
-        <div class="copyright">
-            <p class="text-center text-muted">
+            <p class="text-center text-muted mt-3">
                 &copy; Copyright <strong><span>Guia Acessível</span></strong>. Todos os direitos reservados
                 <!--todos os direitos reservados?-->
             </p>
-        </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
             <p class="text-center text-muted">
-                Design: 
+                Design:
                 <a href="https://bootstrapmade.com/"    target="_blank">BootstrapMade</a>;
-                Desenvolvedores: 
-                <a href="https://github.com/Picolii"    target="_blank">Picoli</a>,
+                Desenvolvedores:
+                <a href="https://github.com/Picolii"    target="_blank">Bernardo</a>,
                 <a href="https://github.com/JoaoBuiu"   target="_blank">João</a>,
                 <a href="https://github.com/BLuiz"      target="_blank">Luiz</a> e
                 <a href="https://github.com/mariwebs"   target="_blank">Mari</a>
@@ -47,3 +45,5 @@
 
 </footer>
 <!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
