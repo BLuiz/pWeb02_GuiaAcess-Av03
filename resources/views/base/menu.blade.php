@@ -1,21 +1,18 @@
-<header id="header">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
 
-    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container container-fluid">
-            <a class="navbar-brand" href="{{ url('/dashboard') }}">Guia Acessível</a>
+      <div class="logo">
+            <h1><a href="{{ url('/dashboard') }}"><span> Guia Acessível</span></a></h1>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
 
-            <div class="container-fluid">
-                <!--Início Links de Páginas-->
-                <ul class="navbar-nav float-end">
-
-                <li class="nav-item px-2 dropdown active">
-                       <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Projeto
-                        </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#"  data-bs-toggle="dropdown">Projeto</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/dashboard') }}"> Início</a></li>
                             <li><a class="dropdown-item" href="{{ url('/dashboard#problema') }}">Problema</a></li>
@@ -76,14 +73,13 @@
                                     </form>
                                 </div>
                             </div>
-
                         @endguest
                     </li>
                     <!--Fim Botão de Perfil-->
                 </ul>
-
+                <i class="bi bi-list mobile-nav-toggle"></i>
             </div>
         </div>
     </nav>
-
-</head>
+    </div>
+</header>

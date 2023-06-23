@@ -1,8 +1,6 @@
 @extends('base.app')
 @section('conteudo')
 @section('tituloPagina', 'Início')
-<div class="col">
-
     <!-- ======= Hero Section ======= -->
     <section id="hero">
 
@@ -109,7 +107,7 @@
             <div class="count-box">
             <i class="bi bi-emoji-smile"></i>
             <span data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Usuários Satisfeitos</p>
+            <p class="text-center">Usuários Satisfeitos</p>
             </div>
         </div>
 
@@ -117,7 +115,7 @@
             <div class="count-box">
             <i class="bi bi-journal-richtext"></i>
             <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Locais Catalogados</p>
+            <p class="text-center">Locais Catalogados</p>
             </div>
         </div>
 
@@ -125,7 +123,7 @@
             <div class="count-box">
             <i class="bi bi-headset"></i>
             <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Avaliações positivas</p>
+            <p class="text-center">Avaliações positivas</p>
             </div>
         </div>
 
@@ -133,7 +131,7 @@
             <div class="count-box">
             <i class="bi bi-people"></i>
             <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Equipe</p>
+            <p class="text-center">Equipe</p>
             </div>
         </div>
 
@@ -175,7 +173,7 @@
                         <div class="pic"><img src="{{ url('assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Bernardo Augusto Picoli</h4>
-                            <span>Programador e Desenvolvedor</span>
+                            <span>Programador Front-end</span>
                             <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -191,7 +189,7 @@
                         <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>João Vitor de Carvalho</h4>
-                            <span>Pesquisador</span>
+                            <span>Programador Back-end</span>
                             <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -207,7 +205,7 @@
                         <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Luiz Gustavo Piuco Bazzotti</h4>
-                            <span>Programador e Desenvolvedor</span>
+                            <span>Programador Back-end</span>
                             <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -223,7 +221,7 @@
                         <div class="pic"><img src="{{ url('assets/img/team/team-4.jpg')}}" class="img-fluid" alt=""></div>
                         <div class="member-info">
                             <h4>Mariana Matoso Gielda</h4>
-                            <span>Pesquisadora</span>
+                            <span>Programador Front-end</span>
                             <div class="social">
                             <a href=""><i class="bi bi-twitter"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
