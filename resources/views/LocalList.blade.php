@@ -3,13 +3,12 @@
 @section('conteudo')
 @section('tituloPagina', 'Listagem de Locais')
 
-
-<div class="container">
+<div class="container" style="margin-top: 8rem">
     <div class="section-title" data-aos="fade-up">
         <h2>Locais disponíveis</h2>
         <p>Catálogo</p>
     </div>
-    
+
     <!--Início Busca-->
     <form action="{{ route('local.search') }}" method="post">
         @csrf
@@ -80,7 +79,7 @@
         </tbody>
     </table>
     <!--Fim Listagem-->
-    
+
 </div>
 
 @endsection

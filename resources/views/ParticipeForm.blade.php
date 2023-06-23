@@ -10,8 +10,7 @@
     @endphp
 @section('tituloPagina', 'Formulário Participe')
 
-<main id="main">
-<div class="container">
+<div class="container" style="margin-top: 8rem">
     <div class="section-title" data-aos="fade-up">
         <h2>Formulário de Local</h2>
         <p>Participe do Projeto</p>
@@ -22,7 +21,7 @@
         @if (!empty($local->id))
             @method('PUT')
         @endif
-        
+
         <!--Início Termos-->
 
         <!--<div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">-->
@@ -47,7 +46,7 @@
             </div>
 
             <div class="row">
-                <div class="col-6"> <!--Nome, Descrição, Telefone e Coordenadas-->   
+                <div class="col-6"> <!--Nome, Descrição, Telefone e Coordenadas-->
                     <div class="row">
                         <label class="form-label">Nome: </label><br>
                         <input type="text" class="form-control" name="nome" value="@if (!empty(old('nome'))) {{ old('nome') }} @elseif(!empty($local->nome)) {{ $local->nome }} @else {{ '' }} @endif" /><br>
@@ -139,5 +138,4 @@
 
     </form>
 </div>
-</main>
 @endsection

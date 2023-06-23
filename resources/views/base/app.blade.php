@@ -23,7 +23,7 @@
     <link href="{{ url ('assets2/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
     <link href="{{ url ('assets2/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{ url ('assets2/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-    <link href="{{ url ('assets2/vendor/aos/aos.css.css')}}" rel="stylesheet">
+    <link href="{{ url ('assets2/vendor/aos/aos.css')}}" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="{{ url ('assets/vendor/aos/aos.css')}}" rel="stylesheet">
     <link href="{{ url ('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -44,7 +44,6 @@
     @include('base.menu') <!--NavBar-->
 
     <div>
-        <br>
         @include('base.flash-message')
         @yield('conteudo')
     </div>
