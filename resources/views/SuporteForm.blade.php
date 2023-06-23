@@ -17,7 +17,7 @@
         <h2>Contato</h2>
         <p>Contate-nos</p>
       </div>
-      
+
       <div class="row">
             <!--Início Contato-->
             <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
@@ -48,25 +48,25 @@
             <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
                 <form action='{{ $route }}' method="POST" enctype="multipart/form-data">
                     @csrf
-                    @if (!empty($usuario->id))
+                    @if (!empty($suporte->id))
                         @method('PUT')
                     @endif
-                    
+
                     <div class="row">
                         <!--ID-->
                         <input type="hidden" name="id"
                         value="@if (!empty(old('id'))) {{ old('id') }} @elseif(!empty($suporte->id)) {{ $suporte->id }} @else {{ '' }} @endif" /><br>
-                        
+
                         <!--Nome-->
                         <div class="col-md-6 form-group">
-                            <input type="text" name="nome" id="name" class="form-control" placeholder="Seu Nome" 
-                            value="@if (!empty(old(''))) {{ old('nome') }} @elseif(!empty($suporte->nome)) {{ $suporte->nome }} @else {{ '' }} @endif" /><br>
+                            <input type="text" name="nome" placeholder="Seu nome" id="nome" class="form-control"
+                            value="@if(!empty(old('nome'))){{old('nome')}}@elseif(!empty($suporte->nome)){{$suporte->nome}}@else{{''}}@endif" /><br>
                         </div>
 
                         <!--Email-->
                         <div class="col-md-6 form-group mt-3 mt-md-0">
                             <input type="email" name="email" id="email" class="form-control" placeholder="Seu Email"
-                            value="@if (!empty(old(''))) {{ old('email') }} @elseif(!empty($suporte->email)) {{ $suporte->email }} @else {{ '' }} @endif" /><br>
+                            value="@if (!empty(old('email'))) {{ old('email') }} @elseif(!empty($suporte->email)) {{ $suporte->email }} @else {{ '' }} @endif" /><br>
                         </div>
                     </div>
 
@@ -74,7 +74,7 @@
                         <!--Assunto-->
                         <div class="form-group mt-3">
                             <input type="text" name="assunto" class="form-control" id="subject" placeholder="Assunto"
-                            value="@if (!empty(old(''))) {{ old('assunto') }} @elseif(!empty($suporte->assunto)) {{ $suporte->assunto }} @else {{ '' }} @endif" /><br>
+                            value="@if(!empty(old('assunto'))){{old('assunto')}}@elseif(!empty($suporte->assunto)){{$suporte->assunto}}@else{{''}}@endif"/><br>
                         </div>
                     </div>
 
@@ -82,15 +82,15 @@
                         <!--Descrição-->
                         <div class="form-group mt-3">
                             <input type="text" name="mensagem" class="form-control" rows="5" placeholder="Mensagem"
-                            value="@if (!empty(old(''))) {{ old('mensagem') }} @elseif(!empty($suporte->mensagem)) {{ $suporte->mensagem }} @else {{ '' }} @endif" /><br>
+                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"/><br>
                         </div>
                     </div>
-                    
+
                     <!--Início Botões-->
                     <button class="btn btn-success" type="submit">
                         <i class="fa-solid fa-save"></i> Enviar
                     </button>
-                    <a href="{{ route('usuario.index') }}" class="btn btn-primary">
+                    <a href="{{ route('suporte.index') }}" class="btn btn-primary">
                         <i class="fa-solid fa-arrow-left"></i> Voltar
                     </a><br><br>
                     <!--Fim Botões-->
