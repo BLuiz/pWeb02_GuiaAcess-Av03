@@ -34,9 +34,9 @@
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
             <p class="text-center text-muted">
-                Design: 
+                Design:
                 <a href="https://bootstrapmade.com/"    target="_blank">BootstrapMade</a>;
-                Desenvolvedores: 
+                Desenvolvedores:
                 <a href="https://github.com/Picolii"    target="_blank">Picoli</a>,
                 <a href="https://github.com/JoaoBuiu"   target="_blank">João</a>,
                 <a href="https://github.com/BLuiz"      target="_blank">Luiz</a> e

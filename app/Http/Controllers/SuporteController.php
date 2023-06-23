@@ -118,7 +118,7 @@ class SuporteController extends Controller
             $dados
         );
 
-        return \redirect('Suporte')->with('success', 'Atualizado com sucesso!');
+        return \redirect('suporte')->with('success', 'Atualizado com sucesso!');
     }
 
     function destroy($id)
@@ -126,9 +126,7 @@ class SuporteController extends Controller
         $suporte = Suporte::findOrFail($id);
 
         //verifica se existe o arquivo vinculado ao registro e depois remove
-        if (Storage::disk('public')->exists($suporte->imagem)) {
-            Storage::disk('public')->delete($suporte->imagem);
-        }
+
         $suporte->delete();
 
         return \redirect('suporte')->with('success', 'Removido com sucesso!');
@@ -142,7 +140,14 @@ class SuporteController extends Controller
                 'like',
                 '%' . $request->valor . '%'
             )->get();
-        } else {
+        }else if ($request->campo == 'email') {
+            $suportes = Suporte::where(
+                'email',
+                'like',
+                '%' . $request->valor . '%'
+            )->get();
+        }
+         else {
             $suportes = Suporte::all();
         }
 

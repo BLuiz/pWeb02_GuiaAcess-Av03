@@ -11,7 +11,7 @@
             <div class="container-fluid">
                 <!--Início Links de Páginas-->
                 <ul class="navbar-nav float-end">
-                    
+
                 <li class="nav-item px-2 dropdown active">
                        <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Projeto
@@ -24,7 +24,7 @@
                             <li><a class="dropdown-item" href="{{ url('/dashboard#desenvolvimento') }}">Desenvolvimento</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item px-2 dropdown active">
                         <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Locais
@@ -35,7 +35,7 @@
                             <li><a class="dropdown-item disabled" href="#">Mapa?</a></li>
                         </ul>
                     </li>
-                    
+
                     <li class="nav-item px-2 dropdown active">
                         <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Suporte
@@ -76,6 +76,7 @@
                                     </form>
                                 </div>
                             </div>
+
                         @endguest
                     </li>
                     <!--Fim Botão de Perfil-->
