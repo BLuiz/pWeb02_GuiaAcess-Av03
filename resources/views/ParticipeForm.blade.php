@@ -10,39 +10,38 @@
     @endphp
 @section('tituloPagina', 'Formulário Participe')
 
-<h2>Formulário de Local</h2>
-
+<main id="main">
 <div class="container">
-    <!--Início Dados do Local-->
+    <div class="section-title" data-aos="fade-up">
+        <h2>Formulário de Local</h2>
+        <p>Participe do Projeto</p>
+    </div>
+
     <form action='{{ $route }}' method="POST" enctype="multipart/form-data">
         @csrf
         @if (!empty($local->id))
             @method('PUT')
         @endif
-
+        
         <!--Início Termos-->
-        <!--
-            <div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-        -->
-        <div class="row-12">    <!--pode ser assim aqui? sem esse textão na class do div da linha 25??-->
-            <h3>Termos de Uso</h3>
-            <p>Este formulário tem a intenção de integrar pessoas com algum tipo de necessidade especial (PCD's, idosos, gestantes, etc) em locais públicos das ruas de Chapecó, também vale ressaltar que esse é um projeto em conjunto com o IFSC Câmpus Chapecó, feito na matéria de OI 4 e Tecnologia Assistivas no sétimo semestre do EMI.
-                Com auxílio dos professores: ADALBERTO TEODOSIO TABALIPA, EDER FERRARI, EMY FRANCIELLI LUNARDI, FERNANDO ROSSETTO GALLEGO CAMPOS, FLAVIO FERNANDES, LEONARDO CAMILO VALENZA, LORRAYNE HEWELLEN CRISTINO RIBEIRO, MIGUEL DEBARBA e PAULO JOSE FURTADO.
-                Realizado pelos alunos: BERNARDO AUGUSTO PICOLI, JOAO VITOR DE CARVALHO, LUIZ GUSTAVO PIUCO BAZZOTTI e MARIANA MATOSO GIELDA.
-                É um projeto que condiz com um site chamado Guia Acessível que irá mostrar o quanto os lugares são acessíveis para cada tipo de necessidade na cidade de Chapecó, acessibilidade segundo a NBR 9050: 2015 define é "como a possibilidade de utilização segura e de forma mais autônoma possível de uma edificação, espaço, mobiliário ou serviço, ainda com a ausência de barreiras de modo a facilitar o acesso de pessoas portadoras de deficiências ou com menor mobilidade." e exatamente isso que queremos inspirar e auxíliar nos estabalecimentos de Chapecó.
-                Respondendo esse formulário você e sua empresa vão:
-                Autorizar o uso de dados fornecidos para utilização no site.</p>
 
-                <label class="form-label">Assinale:</label><br>
-                <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>    <!--Cuidar para não conflitar id iguais-->
-                <label for="contact_email">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
+        <!--<div id="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">-->
+        <div data-aos="fade-up">
+            <h3>Termos de Uso</h3>
+            <p>Este formulário tem a intenção de integrar pessoas com algum tipo de necessidade especial (PCD's, idosos, gestantes, etc) em locais públicos das ruas de Chapecó, também vale ressaltar que esse é um projeto em conjunto com o IFSC Câmpus Chapecó, feito na matéria de OI 4 e Tecnologia Assistivas no sétimo semestre do EMI.</p>
+            <p>Com auxílio dos professores: ADALBERTO TEODOSIO TABALIPA, EDER FERRARI, EMY FRANCIELLI LUNARDI, FERNANDO ROSSETTO GALLEGO CAMPOS, FLAVIO FERNANDES, LEONARDO CAMILO VALENZA, LORRAYNE HEWELLEN CRISTINO RIBEIRO, MIGUEL DEBARBA e PAULO JOSE FURTADO.</p>
+            <p>Realizado pelos alunos: BERNARDO AUGUSTO PICOLI, JOAO VITOR DE CARVALHO, LUIZ GUSTAVO PIUCO BAZZOTTI e MARIANA MATOSO GIELDA.</p>
+            <p>É um projeto que condiz com um site chamado Guia Acessível que irá mostrar o quanto os lugares são acessíveis para cada tipo de necessidade na cidade de Chapecó, acessibilidade segundo a NBR 9050: 2015 define é "como a possibilidade de utilização segura e de forma mais autônoma possível de uma edificação, espaço, mobiliário ou serviço, ainda com a ausência de barreiras de modo a facilitar o acesso de pessoas portadoras de deficiências ou com menor mobilidade." e exatamente isso que queremos inspirar e auxíliar nos estabalecimentos de Chapecó.</p>
+            </p>Respondendo esse formulário você e sua empresa vão: Autorizar o uso de dados fornecidos para utilização no site.</p>
+            <label class="form-label">Assinale:</label><br>
+            <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>    <!--Cuidar para não conflitar id iguais-->
+            <label for="contact_email">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
         </div>
         <!--Fim Termos-->
 
         <!--Início Dados do Local-->
-        <div>
+        <div data-aos="fade-up">
             <h3>Dados do Local</h3>
-
             <div class="row"> <!--ID-->
                 <input type="hidden" name="id" value="@if (!empty(old('id'))) {{ old('id') }} @elseif(!empty($local->id)) {{ $local->id }} @else {{ '' }} @endif" /><br>
             </div>
@@ -82,37 +81,38 @@
         <!--Fim Dados do Local-->
 
         <!--Início Acessibilidade-->
-        <div class="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left"> <!--Cuidar para não conflitar id iguais-->
+        <!--<div class="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">-->
+        <div data-aos="fade-up">
+            <!--Fonte de Pesquisa-->
             <h3>Avaliação de acessibilidade:</h3>
-            <p>A partir daqui, você e/ou sua empresa vão responder uma série de perguntas sobre a acessibilidade do seu estabelecimento segundo as leis do Estado e município, o códigos de obra, plano diretor e as normas da ABNT.
-                <ul>
-                    <li>
-                        <a href="http://acessibilidade.unb.br/images/PDF/NORMA_NBR-9050.pdf">Normas da ABNT</a> 
-                    </li>
-                    <li>
-                        <a href="https://leismunicipais.com.br/codigo-de-obras-chapeco-sc">Código de obras</a> 
-                    </li>
-                    <li>
-                        <a href="https://leismunicipais.com.br/plano-diretor-chapeco-sc">Plano diretor</a>                
-                    </li>
-                </ul>
+            <p>A partir daqui, você e/ou sua empresa vão responder uma série de perguntas sobre a acessibilidade do seu estabelecimento segundo as leis do Estado e município, o códigos de obra, plano diretor e as normas da ABNT.</p>
+            <ul>
+                <li>
+                    <a href="http://acessibilidade.unb.br/images/PDF/NORMA_NBR-9050.pdf">Normas da ABNT</a>
+                </li>
+                <li>
+                    <a href="https://leismunicipais.com.br/codigo-de-obras-chapeco-sc">Código de obras</a>
+                </li>
+                <li>
+                    <a href="https://leismunicipais.com.br/plano-diretor-chapeco-sc">Plano diretor</a>
+                </li>
+            </ul>
         </div>
 
-        <div class="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">       <!--Cuidar para não conflitar id iguais--> 
+        <!--Questionário-->
+        <!--<div class="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">-->
+        <div data-aos="fade-up">
             <h6>A Lei no 11.126, Art. 1o, diz que a pessoa com deficiência visual usuária de cão-guia tem o direito de ingressar e permanecer com o animal em todos os locais públicos ou privados de uso coletivo.  Assinale o que condiz com seu estabelecimento. </h6>
-            <label class="form-label">Assinale:</label><br>
-
+            <label class="form-label">Assinale:</label>
             <input type="radio" name="contact" id="contact_acesso" value="0"/>
             <label for="contact_email">Meu estabelecimento não tem acesso a cão-guia.</label><br>
-
-            <input type="radio" name="contact" id="contact_acesso" value="1"/> 
+            <input type="radio" name="contact" id="contact_acesso" value="1"/> <!-- 1!=2?? -->
             <label for="contact_email">Meu estabelecimento tem acesso a cão-guia.</label><br>
-                <!--1 e 2 não sao iguais?-->
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento condiz com a norma 10.3.5 da ABNT, onde o espaço para o cão-guia - Deve ser previsto um espaço para cão-guia junto de um assento preferencial, com dimensões de 0,70 m de comprimento, 0,40 m de profundidade e 0,30 m de altura.</label><br>
-
+            <input type="radio" name="contact" id="contact_acesso" value="2"/> <!-- 1!=2?? -->
+            <label for="contact_email">Meu estabelecimento condiz com a norma 10.3.5 da ABNT, onde o espaço para o cão-guia - Deve ser previsto um espaço para cão-guia junto de um assento preferencial, com dimensões de 0,70 m de comprimento, 0,40 m de profundidade e 0,30 m de altura.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
         </div> <br>
-        
+        <!--Fim Acessibilidade-->
+
         <!-- Exemplo do Prof para adicionar acessibilidade como vetor json; tenho que ver disso aqui como fazer-->
             <!--
             <div id ="adicionaJson">
@@ -127,16 +127,17 @@
                 </select>
             </div>
             -->
-        <!--Fim Acessibilidade-->
 
         <!--Início Botões-->
         <button class="btn btn-success row-3" type="submit">
-            <i class="fa-solid fa-save"></i> Salvar
+            <i class="fa-solid fa-save"></i> Enviar
         </button>
         <a class="btn btn-primary row-3" href="{{ route('local.index') }}">
             <i class="fa-solid fa-arrow-left"></i> Voltar
         </a><br>
         <!--Fim Botões-->
+
     </form>
 </div>
+</main>
 @endsection

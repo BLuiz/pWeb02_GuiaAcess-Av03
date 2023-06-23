@@ -3,11 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-
-    <title>Guia Acessível</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <title>Guia Acessível</title>
 
 
     <!-- Favicons -->
@@ -26,8 +24,6 @@
     <link href="{{ url ('assets2/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{ url ('assets2/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
     <link href="{{ url ('assets2/vendor/aos/aos.css.css')}}" rel="stylesheet">
-
-
     <!-- Vendor CSS Files -->
     <link href="{{ url ('assets/vendor/aos/aos.css')}}" rel="stylesheet">
     <link href="{{ url ('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -37,27 +33,23 @@
     <link href="{{ url ('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{ url ('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
-
-
-
     <!-- Template Main CSS File -->
     <link href="{{ url ('assets/css/indexstyle.css') }}" rel="stylesheet">
 
-  </head>
+</head>
 
 
 
 <body class="d-flex flex-column min-vh-100">
-    @include('base.menu')
+    @include('base.menu') <!--NavBar-->
 
-    <div class="container">
+    <div>
         <br>
         @include('base.flash-message')
         @yield('conteudo')
     </div>
 
-    @include('base.footer')
-
+    @include('base.footer') <!--Footer-->
 
 
 

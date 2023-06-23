@@ -1,7 +1,7 @@
 @extends('base.app')
 @section('conteudo')
 @section('tituloPagina', 'Início')
-<div class="col" style="padding: 5%">
+<div class="col">
 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
@@ -84,7 +84,7 @@
 
         <div class="row content">
         <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="{{ url('assets/img/undraw_acessbility.png')}}')}}" class="img-fluid" alt="">
+            <img src="{{ url('assets/img/undraw_acessbility.png') }}" class="img-fluid" alt="">
         </div>
         <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>A importância da Acessibilidade nas ruas de Chapecó</h3>
@@ -148,7 +148,7 @@
 
         <div class="row content">
         <div class="col-md-4" data-aos="fade-right">
-            <img src="{{ url('assets/img/details-1.png')}}')}}" class="img-fluid" alt="">
+            <img src="{{ url('assets/img/details-1.png') }}" class="img-fluid" alt="">
         </div>
         <div id="origem" class="col-md-8 pt-4" data-aos="fade-up">
             <h3>Quem somos e como o projeto teve início?</h3>
@@ -159,6 +159,85 @@
             </p>
         </div>
         </div>
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Equipe</h2>
+                    <p>Nossa Equipe</p>
+                </div>
+
+                <div class="row" data-aos="fade-left">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="pic"><img src="{{ url('assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Bernardo Augusto Picoli</h4>
+                            <span>Programador e Desenvolvedor</span>
+                            <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/picoli_bernardo/"><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>João Vitor de Carvalho</h4>
+                            <span>Pesquisador</span>
+                            <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/joaovdec/"><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Luiz Gustavo Piuco Bazzotti</h4>
+                            <span>Programador e Desenvolvedor</span>
+                            <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/majzzena/"><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pic"><img src="{{ url('assets/img/team/team-4.jpg')}}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>Mariana Matoso Gielda</h4>
+                            <span>Pesquisadora</span>
+                            <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/marim0.2/"><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section><!-- End Team Section -->
+
 
         <div class="row content" id="publico">
         <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
@@ -198,86 +277,6 @@
 
     </div>
     </section><!-- End Details Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-    <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-        <h2>Equipe</h2>
-        <p>Nossa Equipe</p>
-        </div>
-
-        <div class="row" data-aos="fade-left">
-
-        <div class="col-lg-3 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pic"><img src="{{ url('assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-                <h4>Bernardo Augusto Picoli</h4>
-                <span>Programador e Desenvolvedor</span>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/picoli_bernardo/"><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-                <h4>João Vitor de Carvalho</h4>
-                <span>Pesquisador</span>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/joaovdec/"><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="member" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pic"><img src="{{ url('assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-                <h4>Luiz Gustavo Piuco Bazzotti</h4>
-                <span>Programador e Desenvolvedor</span>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/majzzena/"><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="member" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pic"><img src="{{ url('assets/img/team/team-4.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="member-info">
-                <h4>Mariana Matoso Gielda</h4>
-                <span>Pesquisadora</span>
-                <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/marim0.2/"><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-            </div>
-        </div>
-
-        </div>
-
-    </div>
-    </section><!-- End Team Section -->
 
     </main><!-- End #main -->
 </div>
