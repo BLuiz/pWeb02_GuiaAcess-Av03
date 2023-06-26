@@ -27,7 +27,7 @@ class Local extends Model
             'descricao'     => 'nullable | max: 200',
             'telefone'      => 'required | max: 20',
             'coordenada'    => 'required | max: 20',
-            'imagem'        => 'required | image | mimes:jpeg,jpg,png | max:2048',
+            'imagem'        => 'nullable | image | mimes:jpeg,jpg,png | max:2048',
             'acessibilidade'=> 'nullable', //?
             /*
             'avaliacao'     => 'nullable',
