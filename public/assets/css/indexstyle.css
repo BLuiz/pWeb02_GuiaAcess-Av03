@@ -676,6 +676,9 @@ section {
 .section-title {
   padding-bottom: 40px;
 }
+.section-title1 {
+  padding-bottom: 40px;
+}
 
 .section-title h2 {
   font-size: 14px;
@@ -706,6 +709,16 @@ section {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #010483;
+}
+.section-title1 p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #010483;
+  padding-left: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1528,6 +1541,12 @@ section {
   font-weight: 600;
   margin-bottom: 5px;
   color: #010483;
+}
+.contact-part .info-part h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #010483;
+  
 }
 
 .contact .info p {

@@ -4,7 +4,7 @@
 @section('tituloPagina', 'FAQ')
 
 <div class="container" style="margin-top: 8rem">
-    <div class="section-title" data-aos="fade-up">
+    <div class="section-title section-title1" data-aos="fade-up">
         <h2>Questões frequentemente perguntadas</h2></h2>
         <p>Suporte</p>
     </div>
@@ -33,7 +33,7 @@
         </div>
     </form>
     <!--Fim da Busca-->
-
+    <br>
     <!--Início da Listagem-->
     <table class="table table-striped table-hover">
         <thead>

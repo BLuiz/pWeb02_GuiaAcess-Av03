@@ -35,7 +35,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ url ('assets/css/indexstyle.css') }}" rel="stylesheet">
-
+    
 </head>
 
 

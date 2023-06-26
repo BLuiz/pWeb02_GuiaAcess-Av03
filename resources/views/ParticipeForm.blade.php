@@ -11,7 +11,7 @@
 @section('tituloPagina', 'Formulário Participe')
 
 <div class="container" style="margin-top: 8rem">
-    <div class="section-title" data-aos="fade-up">
+    <div class="section-title section-title1" data-aos="fade-up">
         <h2>Formulário de Local</h2>
         <p>Participe do Projeto</p>
     </div>
@@ -32,23 +32,32 @@
             <p>Realizado pelos alunos: BERNARDO AUGUSTO PICOLI, JOAO VITOR DE CARVALHO, LUIZ GUSTAVO PIUCO BAZZOTTI e MARIANA MATOSO GIELDA.</p>
             <p>É um projeto que condiz com um site chamado Guia Acessível que irá mostrar o quanto os lugares são acessíveis para cada tipo de necessidade na cidade de Chapecó, acessibilidade segundo a NBR 9050: 2015 define é "como a possibilidade de utilização segura e de forma mais autônoma possível de uma edificação, espaço, mobiliário ou serviço, ainda com a ausência de barreiras de modo a facilitar o acesso de pessoas portadoras de deficiências ou com menor mobilidade." e exatamente isso que queremos inspirar e auxíliar nos estabalecimentos de Chapecó.</p>
             </p>Respondendo esse formulário você e sua empresa vão: Autorizar o uso de dados fornecidos para utilização no site.</p>
-            <label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="acesso" required/>    <!--Cuidar para não conflitar id iguais-->
-            <label for="contact_email">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
+            <div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="acesso" required/>    <!--Cuidar para não conflitar id iguais-->
+            <label class="form-check-label" for="contact_email">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
             <br/>
-            <input type="radio" name="contact" id="contact_denaoacesso" value="acesso" required/>
-            <label for="contact_email">Eu não concordo com a premissa do projeto e não autorizo as suas diretrizes.</label>
-
+            <input class="form-check-input" type="radio" name="contact" id="contact_denaoacesso" value="acesso" required/>
+            <label class="form-check-label" for="contact_email">Eu não concordo com a premissa do projeto e não autorizo as suas diretrizes.</label>
+            </div>
         </div>
         <!--Fim Termos-->
 
         <br/>
-        <hr>
+        <hr data-aos="fade-up">
 
         <!--Início Dados do Local-->
         <div data-aos="fade-up">
             <br/>
-            <h3>Dados do Local</h3>
+            <div class="section-title section-title1" data-aos="fade-up">
+                    <h2>Nos conte mais sobre</h2>
+                    <p>Dados do Local</p>
+                </div>
             <div> <!--ID-->
                 <input type="hidden" name="id" value=
                 "@if(!empty(old('id'))){{ old('id') }}@elseif(!empty($local->id)){{ $local->id }}@else {{ '' }}@endif"/>
@@ -91,14 +100,17 @@
                     </div>
                 </div>
             </div>
-        </div><br><hr><br>
+        </div><br><hr data-aos="fade-up"><br>
         <!--Fim Dados do Local-->
 
         <!--Início Acessibilidade-->
         <!--<div class="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">-->
         <div data-aos="fade-up">
             <!--Fonte de Pesquisa-->
-            <h3>Avaliação de acessibilidade:</h3>
+            <div class="section-title section-title1" data-aos="fade-up">
+                    <h2>Normas da ABNT</h2>
+                    <p>Avaliação de acessibilidade</p>
+                </div>
             <h5>A partir daqui, você e/ou sua empresa vão responder uma série de perguntas sobre a acessibilidade do seu estabelecimento segundo as leis do Estado e município, o códigos de obra, plano diretor e as normas da ABNT.</h5>
             <ul>
                 <li>
@@ -112,20 +124,29 @@
                 </li>
             </ul>
         </div>
-        <hr>
+        <hr data-aos="fade-up">
         <!--Questionário-->
         <!--<div class="problema" class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">-->
+       <div class="container">
+
+     
         <div data-aos="fade-up">
             <h6>A Lei no 11.126, Art. 1o, diz que a pessoa com deficiência visual usuária de cão-guia tem o direito de ingressar e permanecer com o animal em todos os locais públicos ou privados de uso coletivo.  Assinale o que condiz com seu estabelecimento. </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="0"/>
-            <label for="contact_email">Meu estabelecimento não tem acesso a cão-guia.</label>
             <br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento tem acesso a cão-guia e segue as normas da ABNT.</label> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-        </div> <br>
+            <div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="0"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não tem acesso a cão-guia.</label>
+            <br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento tem acesso a cão-guia e segue as normas da ABNT.</label> 
+        </div></div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -137,15 +158,20 @@
                 <p>7.9 Sanitários e banheiros com trocador para criança e adulto – Sanitário familiar Em edifícios de uso público ou coletivo, dependendo da sua especifcidade ou natureza do seu uso, recomenda-se ter sanitários ou banheiros familiar com entrada independente, providos de boxes com bacias sanitárias para adulto (7.7.2.1) e outro com bacia infantil, além de boxe com superfície para troca de roupas na posição deitada, com dimensões mínimas de 0,70 m de largura por 1,80 m de comprimento e 0,46 m de altura, devendo suportar no mínimo 150 kg, e providos de barras de apoio, conforme 7.14.1;</p>
                 <p>7.12.1 Boxe para chuveiro e ducha Banheiros acessíveis e vestiários com banheiros conjugados devem prever área de manobra para rotação de 360° para circulação de pessoa em cadeira de rodas.</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não tem banheiro acessível.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento tem banheiro acessível e segue as normas da ABNT.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não tem banheiro acessível.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento tem banheiro acessível e segue as normas da ABNT.</label><br>
+            </div>
         </div> <br>
-
-        <hr>
+        </div>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -156,15 +182,21 @@
                 <p>III - disponibilização de recursos, tanto humanos quanto tecnológicos, que garantam atendimento em igualdade de condições com as demais pessoas.</p>
                 <p>Seu estabelecimente tem uma pessoa preparada para atender uma pessoa com deficiência?</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Sim.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Não.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Sim.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Não.</label><br> 
+            </div>
+        </div> 
+        <br>
 
-        </div> <br>
-
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -175,15 +207,21 @@
                 <p>10.3.2.4 Quando existir anteparo em frente aos espaços para P.C.R., sua altura e distância não podem bloquear o ângulo visual de 30°, medido a partir da linha visual padrão, com altura de 1,15 m do piso até o limite inferior da tela ou local do palco onde a atividade é desenvolvida, conforme Figura 139. Quando, por questões de segurança, o anteparo obstruir o ângulo visual, este deve ser executado de forma a permitir a visualização.</p>
                 <p>10.4.2 Uma rota acessível deve interligar os espaços para P.C.R. ao palco e aos bastidores.</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">O meu estabelecimento NÃO apresenta palco para eventos.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">O meu estabelecimento apresenta palco para eventos e segue as normas da ABNT.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">O meu estabelecimento NÃO apresenta palco para eventos.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">O meu estabelecimento apresenta palco para eventos e segue as normas da ABNT.</label><br> 
+            </div>
+        </div> 
+        <br>
 
-        </div> <br>
-
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -191,15 +229,20 @@
 
                 <br><br><p>No seu estabelecimento:</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Não tem estacionamento ou não tem vaga para PCD.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Tem vaga para PCD.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+             <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Não tem estacionamento ou não tem vaga para PCD.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Tem vaga para PCD.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
         </div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -218,15 +261,20 @@
                 <p>9.2.3.5 Deve ser assegurada altura livre sob a superfície de no mínimo 0,73 m, com profundidade livre mínima de 0,30 m para permitir a aproximação frontal ou lateral.</p>
                 <p>9.3.1.4 Deve ser assegurada altura livre sob o tampo de no mínimo 0,73 m, com profundidade livre mínima de 0,50 m, de modo que a P.C.R. tenha a possibilidade de avançar sob a mesa ou superfície.</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não tem balcão, bilheterias e balcões de informação ou tem mas não segue nenhuma norma.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento tem balcão, bilheterias e balcões de informação e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não tem balcão, bilheterias e balcões de informação ou tem mas não segue nenhuma norma.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento tem balcão, bilheterias e balcões de informação e segue as normas.</label><br>
+        </div>
         </div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -238,15 +286,20 @@
                 <p>IV - nos trechos circulares em leque ou em caracol das escadas, os pisos dos degraus deverão ter profundidade mínima de 0,06 m, nos bordos internos e 0,25 m no centro do vão;</p>
                 <p>V - ter balaustrada ou corrimão fixado a altura entre 0,80 a 0,92cm e que atenda à NBR 9050 da ABNT;</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não tem escadas ou tem mas não segue nenhuma norma.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento tem escadas e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não tem escadas ou tem mas não segue nenhuma norma.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento tem escadas e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
         </div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -260,15 +313,20 @@
                 <p>V - as rampas para pedestres deverão ter balaustrada ou corrimão com altura entre de 0,80 a 0,92m e que atenda a NBR 9050;</p>
                 <p>VI - quando destinadas ao acesso de veículos, as rampas em linha reta deverão ter largura mínima de 3,00 m e, quando em curva o raio não poderá ser menor que 5,00 m do eixo da mesma.</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não tem rampa ou tem mas não segue nenhuma norma.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento tem rampa e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não tem rampa ou tem mas não segue nenhuma norma.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento tem rampa e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
+        </div> <br>
 
-        </div> <br>''
-
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -282,15 +340,20 @@
                 <p>§ 4º No caso da instalação de elevadores novos ou da troca dos já existentes, qualquer que seja o número de elevadores da edificação de uso público ou de uso coletivo, pelo menos um deles terá cabine que permita acesso e movimentação cômoda de pessoa portadora de deficiência ou com mobilidade reduzida, de acordo com o que especifica as normas técnicas de acessibilidade da ABNT;</p>
                 <p>§ 5º Junto às botoeiras externas do elevador, deverá estar identificado, em braile, em qual andar da edificação a pessoa se encontra</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não tem elevador ou tem mas não segue nenhuma norma.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento tem elevador e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não tem elevador ou tem mas não segue nenhuma norma.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento tem elevador e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
         </div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -305,15 +368,20 @@
                 <p>ABNT 10.8.2 As mesas devem ser distribuídas de forma a estar integradas às demais e em locais onde sejam oferecidos todos os serviços e comodidades disponíveis no estabelecimento.</p>
                 <p>ABNT 10.8.2.3 Quando o local possuir cardápio, ao menos um exemplar deve estar em Braille e em texto com caracteres ampliados.</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
         </div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
         <br>
 
         <div data-aos="fade-up">
@@ -328,25 +396,36 @@
                 <p>ABNT 10.8.2 As mesas devem ser distribuídas de forma a estar integradas às demais e em locais onde sejam oferecidos todos os serviços e comodidades disponíveis no estabelecimento.</p>
                 <p>ABNT 10.8.2.3 Quando o local possuir cardápio, ao menos um exemplar deve estar em Braille e em texto com caracteres ampliados.</p>
             </h6>
-            <br><label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
-
+            <br><div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check">            
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
         </div> <br>
 
-        <hr>
+        <hr data-aos="fade-up">
 
 
         <p></p>
         <div data-aos="fade-up">
-            <h6>pergunta radio</h6>
-            <label class="form-label">Assinale:</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="1"/>
-            <label for="contact_email">opção 1</label><br>
-            <input type="radio" name="contact" id="contact_acesso" value="2"/>
-            <label for="contact_email">opção 2</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            <h6>Pergunta radio</h6><br>
+            <div class="contact-part">
+            <div class="info-part">
+                <h4>Assinale:</h4>
+            </div>
+            </div>
+            <div class="form-check"> 
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="1"/>
+            <label class="form-check-label" for="contact_email">opção 1</label><br>
+            <input class="form-check-input" type="radio" name="contact" id="contact_acesso" value="2"/>
+            <label class="form-check-label" for="contact_email">opção 2</label><br> <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
+            </div>
         </div> <br>
         <!--Fim Acessibilidade-->
 
@@ -366,14 +445,14 @@
             -->
 
         <!--Início Botões-->
-        <button class="btn btn-success row-3" type="submit">
+        <button class="btn btn-success row-3" type="submit" data-aos="fade-up">
             <i class="fa-solid fa-save"></i> Enviar
         </button>
-        <a class="btn btn-primary row-3" href="{{ url('/local') }}">
+        <a class="btn btn-primary row-3" href="{{ url('/local') }}" data-aos="fade-up">
             <i class="fa-solid fa-arrow-left"></i> Voltar
         </a><br>
         <!--Fim Botões-->
-
+<br><br>
     </form>
 </div>
 @endsection

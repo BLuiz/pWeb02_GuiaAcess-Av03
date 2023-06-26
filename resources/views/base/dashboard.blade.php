@@ -161,7 +161,7 @@
         <!-- ======= Team Section ======= -->
         <section id="team" class="team">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title section-title1" data-aos="fade-up">
                     <h2>Equipe</h2>
                     <p>Nossa Equipe</p>
                 </div>

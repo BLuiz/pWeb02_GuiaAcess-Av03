@@ -10,10 +10,11 @@
     @endphp
 
 @section('tituloPagina', 'Formulário Suporte')
-
-    <div class="container" style="margin-top: 8rem">
-
-      <div class="section-title" data-aos="fade-up">
+<main id="main">
+    <section id="contact" class="contact">    
+    <div class="container" style="margin-top: 3rem"> 
+    
+      <div class="section-title section-title1" data-aos="fade-up">
         <h2>Contato</h2>
         <p>Contate-nos</p>
       </div>
@@ -25,7 +26,7 @@
                     <div class="address">
                         <i class="bi bi-geo-alt"></i>
                         <h4>Localização:</h4>
-                        <p>Av. Nereu Ramos, 3450 D - Seminário, Chapecó - SC, 89813-000</p>
+                        <p>Av. Nereu Ramos, 3450 D - <br>Seminário, Chapecó - SC, 89813-000</p>
                     </div>
 
                     <div class="email">
@@ -81,8 +82,8 @@
                     <div class="row">
                         <!--Descrição-->
                         <div class="form-group mt-3">
-                            <input type="text" name="mensagem" class="form-control" rows="5" placeholder="Mensagem"
-                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"/><br>
+                            <textarea type="text" name="mensagem" class="form-control" rows="5" placeholder="Mensagem"
+                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"></textarea><br>
                         </div>
                     </div>
 
@@ -101,5 +102,5 @@
 
         </div>
     </div>
-
+    </main>
 @endsection

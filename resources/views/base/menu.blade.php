@@ -45,7 +45,7 @@
                     <!--Fim Links de Páginas-->
 
                     <!--Início Botão de Perfil-->
-                    <li class="nav-item px-2">
+                    <li class="nav-item">
                         @guest
                             <li class="nav-item px-2">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Logar') }}</a>
@@ -56,12 +56,11 @@
                                 </li>
                             @endif
                             @else
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class='fas fa-user'></i> {{ Auth::user()->name }}
-                                </button>
-                                <div class="dropdown-menu">
+                            <div class="nav-item dropdown active">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class='fas fa-user p-2'></i> {{ Auth::user()->name }}</a>
+                                <ul class="dropdown-menu">
                                     <a class="dropdown-item" href="#"> <i class='fas fa-user-cog'></i> Perfil</a>   <!--Página de perfil?-->
                                     <a class="dropdown-item" href="#"><i class='fas fa-cog'></i> Configurações</a>
                                     <div class="dropdown-divider"></div>
@@ -71,8 +70,9 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                </div>
+                                </ul>
                             </div>
+                            </li>
                         @endguest
                     </li>
                     <!--Fim Botão de Perfil-->

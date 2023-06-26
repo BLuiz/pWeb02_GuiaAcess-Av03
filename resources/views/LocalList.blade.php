@@ -4,7 +4,7 @@
 @section('tituloPagina', 'Listagem de Locais')
 
 <div class="container" style="margin-top: 8rem">
-    <div class="section-title" data-aos="fade-up">
+    <div class="section-title section-title1" data-aos="fade-up">
         <h2>Locais disponíveis</h2>
         <p>Catálogo</p>
     </div>
@@ -13,14 +13,24 @@
     <form action="{{ route('local.search') }}" method="post">
         @csrf
         <div class="row">
-            <div class="col-2">
-                <input type="checkbox" name="campo" value="nome"><label for="campo">Nome</label><br>
-                <input type="checkbox" name="campo" value="telefone"><label for="campo">Telefone</label><br>
-            </div>
-            <div class="col-4">
+            
+                <div class="col-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="campo" value="nome">
+                        <label class="form-check-label" for="campo">Nome</label><br>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="campo" value="telefone">
+                        <label class="form-check-label" for="campo">Telefone</label><br>
+                    </div>
+                </div>
+            
+            <div class="col-5">
             <input type="text" class="form-control" placeholder="Pesquisar" name="valor" />
             </div>
-            <div class="col-6">
+            <div class="col-4">
                 <button class="btn btn-primary" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i> Buscar
                 </button>
@@ -30,7 +40,7 @@
         </div>
     </form>
     <!--Fim Busca-->
-
+    <br>
     <!--Início Listagem-->
     <table class="table table-striped table-hover">
         <thead>
