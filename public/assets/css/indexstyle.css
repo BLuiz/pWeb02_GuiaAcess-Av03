@@ -181,7 +181,7 @@ p, h3{
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -315,7 +315,7 @@ p, h3{
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -443,14 +443,14 @@ p, h3{
   border: none;
   margin-right: 10px;
   border: none !important;
- 
+
 }
 
 #hero form .form-control:hover,
 #hero form .form-control:focus {
   outline: none;
   box-shadow: none;
-} 
+}
 #hero {
   width: 100%;
   background: url("../img/hero-bg.jpg");
@@ -1516,6 +1516,9 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.cor-fonte{
+    color: #1b1d8d;
+}
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1546,7 +1549,7 @@ section {
   font-size: 18px;
   font-weight: 600;
   color: #010483;
-  
+
 }
 
 .contact .info p {
