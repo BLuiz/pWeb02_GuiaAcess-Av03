@@ -40,7 +40,7 @@
             <!--Trocando tag Label por P arruma o ponto e o texto em linhas diferentes, mas não sei se é adequado-->
             <div class="form-check">
             <input class="form-check-input" type="radio" name="contact"  value="acesso" required/>    <!--Cuidar para não conflitar id iguais-->
-            <label class="form-check-label" for="contact_email">Eu concor-fontedo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
+            <label class="form-check-label" for="contact_email">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
             </div>
         </div>
         <!--Fim Termos-->
@@ -187,7 +187,7 @@
                     <h6>Meu estabelecimento segue a lei nº 13.146, Art. 9º que diz que a pessoa com deficiência tem direito a receber atendimento prioritário, sobretudo com a finalidade de:
 
                         <br><br><P>Sugues as restrições de:</P>
-                        <p>I - proteção e socor-fontero em quaisquer circunstâncias;</p>
+                        <p>I - proteção e socorro em quaisquer circunstâncias;</p>
                         <p>II - atendimento em todas as instituições e serviços de atendimento ao público;</p>
                         <p>III - disponibilização de recursos, tanto humanos quanto tecnológicos, que garantam atendimento em igualdade de condições com as demais pessoas.</p>
                         <p>Seu estabelecimente tem uma pessoa preparada para atender uma pessoa com deficiência?</p>
@@ -285,11 +285,11 @@
                         <h6>Segundo o código de obras Art. 36 Será obrigatória a instalação de, no mínimo, 01 (um) elevador nas edificações, nas seguintes condições:
 
                             <br><br><p>Seu estabelecimento segue as condições descritas abaixo sobre o elevador:</p>
-                            <p>I - nas edificações de até quatro pavimentos, de acor-fontedo com o Anexo I desta Lei Complementar, é obrigatório o uso de rampa, elevador ou plataforma elevatória, conforme normas técnicas de acessibilidade da ABNT;</p>
+                            <p>I - nas edificações de até quatro pavimentos, de acordo com o Anexo I desta Lei Complementar, é obrigatório o uso de rampa, elevador ou plataforma elevatória, conforme normas técnicas de acessibilidade da ABNT;</p>
                             <p>II - nas Edificações de mais de quatro pavimentos, ou cuja distância vertical do piso do pavimento de menor cota ao piso do pavimento de maior cota, for superior a 11, 00 metros.</p>
                             <p>§ 1º Nas edificações de uso público será garantido o acesso em todos os pavimentos às pessoas com necessidades especiais através de rampas e/ou elevador a partir do 1º pavimento - Conforme NBR 9050 e NBR 13.994;</p>
-                            <p>§ 2º Nas edificações de uso coletivo, conforme regulamentação do Decreto Federal 5.296/2004 e Anexo I desta Lei Complementar, será garantido o acesso em todos os pavimentos às pessoas com deficiência física a partir do primeiro pavimento de acor-fontedo com a NBR 9050 e NBR 13.944;</p>
-                            <p>§ 4º No caso da instalação de elevadores novos ou da troca dos já existentes, qualquer que seja o número de elevadores da edificação de uso público ou de uso coletivo, pelo menos um deles terá cabine que permita acesso e movimentação cômoda de pessoa portadora de deficiência ou com mobilidade reduzida, de acor-fontedo com o que especifica as normas técnicas de acessibilidade da ABNT;</p>
+                            <p>§ 2º Nas edificações de uso coletivo, conforme regulamentação do Decreto Federal 5.296/2004 e Anexo I desta Lei Complementar, será garantido o acesso em todos os pavimentos às pessoas com deficiência física a partir do primeiro pavimento de acordo com a NBR 9050 e NBR 13.944;</p>
+                            <p>§ 4º No caso da instalação de elevadores novos ou da troca dos já existentes, qualquer que seja o número de elevadores da edificação de uso público ou de uso coletivo, pelo menos um deles terá cabine que permita acesso e movimentação cômoda de pessoa portadora de deficiência ou com mobilidade reduzida, de acordo com o que especifica as normas técnicas de acessibilidade da ABNT;</p>
                             <p>§ 5º Junto às botoeiras externas do elevador, deverá estar identificado, em braile, em qual andar da edificação a pessoa se encontra</p>
                         </h6>
                         <br>
@@ -387,8 +387,8 @@
                         <p>I - serem construídas de material resistente e incombustível;</p>
                         <p>II - ter piso revestido em material adequado a sua finalidade;</p>
                         <p>III - as rampas de acesso deverão ser construídas dentro dos limites do lote;</p>
-                        <p>IV - declividade máxima será de 8,33 % (1:12), considerando patamares de descanso e distâncias máximas a serem percor-fonteridas, conforme especificações da NBR 9050, quando para acesso de pedestres e 30% para acesso de veículos;</p>
-                        <p>V - as rampas para pedestres deverão ter balaustrada ou cor-fonterimão com altura entre de 0,80 a 0,92m e que atenda a NBR 9050;</p>
+                        <p>IV - declividade máxima será de 8,33 % (1:12), considerando patamares de descanso e distâncias máximas a serem percorridas, conforme especificações da NBR 9050, quando para acesso de pedestres e 30% para acesso de veículos;</p>
+                        <p>V - as rampas para pedestres deverão ter balaustrada ou corrimão com altura entre de 0,80 a 0,92m e que atenda a NBR 9050;</p>
                         <p>VI - quando destinadas ao acesso de veículos, as rampas em linha reta deverão ter largura mínima de 3,00 m e, quando em curva o raio não poderá ser menor que 5,00 m do eixo da mesma.</p>
                     </h6>
                     <br><div class="contact-part">
@@ -414,7 +414,7 @@
                         <p>Art. 31 I - largura dos degraus entre 28 e 32cm, e altura entre 16 e 18 cm, em conformidade com a fórmula de Blondel (63 = (2h+b) = 64) em centímetros;</p>
                         <p>Art. 31 II - lance máximo, sem patamar, de 16 degraus;</p>
                         <p>Art. 31 IV - nos trechos circulares em leque ou em caracol das escadas, os pisos dos degraus deverão ter profundidade mínima de 0,06 m, nos bordos internos e 0,25 m no centro do vão;</p>
-                        <p>Art. 31 V - ter balaustrada ou cor-fonterimão fixado a altura entre 0,80 a 0,92cm e que atenda à NBR 9050 da ABNT;</p>
+                        <p>Art. 31 V - ter balaustrada ou corrimão fixado a altura entre 0,80 a 0,92cm e que atenda à NBR 9050 da ABNT;</p>
                     </h6>
                     <br><div class="contact-part">
                     <div class="info-part">
@@ -446,7 +446,7 @@
                 <p>4.6.6.1 As maçanetas devem preferencialmente ser do tipo alavanca, possuir pelo menos 100 mm de comprimento e acabamento sem arestas e recurvado na extremidade, apresentando uma distância mínima de 40 mm da superfície da porta. Devem ser instaladas a uma altura que pode variar entre 0,80 m e 1,10 m do piso acabado</p>
                 <p>4.6.6.2 Os puxadores verticais para portas devem ter diâmetro entre 25 mm e 45 mm, com afastamento de no mínimo 40 mm entre o puxador e a superfície da porta. O puxador vertical deve ter comprimento mínimo de 0,30 m. Devem ser instalados a uma altura que pode variar entre 0,80 m e 1,10 m do piso acabado</p>
                 <p>4.6.6.3 Os puxadores horizontais para portas devem ter diâmetro entre 25 mm e 45 mm, com afastamento de no mínimo 40 mm. Devem ser instalados a uma altura que pode variar entre 0,80 m e 1,10 m do piso acabado</p>
-                <p>4.6.6.4 As barras antipânico devem ser apropriadas ao tipo de porta em que são instaladas e devem atender integralmente ao disposto na ABNT NBR 11785. Se instaladas em portas cor-fonteta-fogo, devem apresentar tempo requerido de resistência ao fogo compatível com a resistência ao fogo destas portas. Devem ser instaladas a uma altura de 0,90 m do piso acabado.</p>
+                <p>4.6.6.4 As barras antipânico devem ser apropriadas ao tipo de porta em que são instaladas e devem atender integralmente ao disposto na ABNT NBR 11785. Se instaladas em portas corta-fogo, devem apresentar tempo requerido de resistência ao fogo compatível com a resistência ao fogo destas portas. Devem ser instaladas a uma altura de 0,90 m do piso acabado.</p>
             </h6>
             <br><div class="contact-part">
             <div class="info-part">
