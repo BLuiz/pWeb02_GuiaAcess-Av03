@@ -9,11 +9,12 @@
         }
     @endphp
 
+
 @section('tituloPagina', 'Formulário Suporte')
 <main id="main">
-    <section id="contact" class="contact">    
-    <div class="container" style="margin-top: 3rem"> 
-    
+    <section id="contact" class="contact">
+    <div class="container" style="margin-top: 3rem">
+
       <div class="section-title section-title1" data-aos="fade-up">
         <h2>Contato</h2>
         <p>Contate-nos</p>
@@ -82,8 +83,8 @@
                     <div class="row">
                         <!--Descrição-->
                         <div class="form-group mt-3">
-                            <textarea type="text" name="mensagem" class="form-control" rows="5" placeholder="Mensagem"
-                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"></textarea><br>
+                            <input type="text" name="mensagem" class="form-control" rows="5" placeholder="Mensagem" style="text-align:center; height:100px;"
+                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"><br>
                         </div>
                     </div>
 
