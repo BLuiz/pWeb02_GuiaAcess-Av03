@@ -50,7 +50,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('local', LocalController::class);
     Route::post('local/search', [LocalController::class, 'search'])->name(
         'local.search'
-
+    );
+    Route::get('local/detalhe/{id}', [LocalController::class, 'detalhe'])->name(
+        'local.detalhe'
     );//
 
     //Suporte

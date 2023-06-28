@@ -50,6 +50,19 @@ class LocalController extends Controller
         ]);
     }
 
+    function detalhe($id)
+    {
+        //select * from local where id = $id;
+        $local = Local::findOrFail($id);
+
+        //$categorias = Categoria::orderBy('nome')->get();      //se tiver alguma chave estrangeira
+
+        return view('DetalheLocal')->with([
+            'local' => $local,
+            //'categorias' => $categorias,                      //se tiver alguma chave estrangeira
+        ]);
+    }
+
     //Funções do Banco
     function store(Request $request)
     {
@@ -64,7 +77,7 @@ class LocalController extends Controller
             'telefone'      => $request->telefone,
             'coordenada'    => $request->coordenada
         ];
-        
+
         //imagem
         $imagem = $request->file('imagem');
         $nome_arquivo = '';
@@ -111,7 +124,7 @@ class LocalController extends Controller
             'telefone'      => $request->telefone,
             'coordenada'    => $request->coordenada
         ];
-        
+
         //imagem
         $imagem = $request->file('imagem');
         $nome_arquivo = '';

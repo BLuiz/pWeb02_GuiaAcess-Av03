@@ -19,6 +19,12 @@ class AuthenticatedSessionController extends Controller
     {
         return view('auth.login');
     }
+    public function createTeste(): View
+    {
+        return view('auth.login-register');
+    }
+
+
 
     /**
      * Handle an incoming authentication request.

@@ -50,6 +50,9 @@
                             <li class="nav-item px-2">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Logar') }}</a>
                             </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link" href="{{ route('login-register') }}">{{ __('TESTE') }}</a>
+                            </li>
                             @if (Route::has('register'))
                                 <li class="nav-item px-2">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar-se') }}</a>
