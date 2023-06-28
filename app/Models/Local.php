@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Local extends Model
 {
@@ -11,8 +12,10 @@ class Local extends Model
     protected $table = "local";
 
     protected $fillable = [
-        'nome', 'descricao', 'telefone', 'coordenada', 'imagem','acessibilidade'
+        'nome', 'descricao', 'telefone', 'coordenada', 'imagem','acessibilidade' //, 'palavra-chave'
     ];
+
+    //conversão de json para text
     protected function acessibilidade(): Attribute
     {
         return Attribute::make(
@@ -28,11 +31,8 @@ class Local extends Model
             'telefone'      => 'required | max: 20',
             'coordenada'    => 'required | max: 20',
             'imagem'        => 'nullable | image | mimes:jpeg,jpg,png | max:2048',
-            'acessibilidade'=> 'nullable', //?
-            /*
-            'avaliacao'     => 'nullable',
-            'comentario'    => 'nullable'
-            */
+            'acessibilidade'=> 'nullable',
+            //'palavra-chave'=> 'required | max:50'
         ];
     }
 
@@ -42,11 +42,13 @@ class Local extends Model
             'telefone.required'         => 'O telefone é obrigatório',
             'coordenada.required'       => 'As coordenadas são obrigatórias',
             'imagem.required'           => 'O imagem é obrigatória',
+            //'imagem.required'           => 'O palavra-chave é obrigatória',
 
             'nome.max'                  => 'Só é permitido 50 caracteres',
             'descricao.max'             => 'Só é permitido 200 caracteres',
             'telefone.max'              => 'Só é permitido 20 caracteres',
-            'coordenada.max'            => 'Só é permitido 20 caracteres'
+            'coordenada.max'            => 'Só é permitido 20 caracteres',
+            //'palavra-chave.max'            => 'Só é permitido 50 caracteres'
         ];
     }
 }

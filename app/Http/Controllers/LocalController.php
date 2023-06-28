@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class LocalController extends Controller
 {
+    //Funções de Retorno de páginas
     function index()
     {
         $locals = Local::All();
@@ -21,42 +22,6 @@ class LocalController extends Controller
         //$categorias = Categoria::orderBy('nome')->get();
         //dd($categorias);
         return view('ParticipeForm');                                    //->with(['categorias' => $categorias]);
-    }
-
-    function store(Request $request)
-    {
-        $request->validate(
-            Local::rules(),
-            Local::messages()
-        );
-
-        //adiciono os dados do formulário ao vetor
-        $dados = [
-            'nome'          => $request->nome,
-            'descricao'     => $request->descricao,
-            'telefone'      => $request->telefone,
-            'coordenada'    => $request->coordenada,
-            'acessibilidade'=> $request->acessibilidade
-        ];
-
-        $imagem = $request->file('imagem');
-        $nome_arquivo = '';
-
-
-        if ($imagem) {                  //verifica existência de imagem
-            $nome_arquivo = date('YmdHis') . '.' . $imagem->getClientOriginalExtension();
-
-            $diretorio = 'imagem/';     //salva a imagem em uma pasta
-
-            $imagem->storeAs($diretorio, $nome_arquivo, 'public');
-
-            $dados['imagem'] = $diretorio . $nome_arquivo;
-        }
-
-        //dd( $request->nome);
-        Local::create($dados);          //passa o vetor os dados do formulário para serem salvos
-
-        return \redirect('local')->with('success', 'Cadastrado com sucesso!');
     }
 
     function edit($id)
@@ -85,6 +50,54 @@ class LocalController extends Controller
         ]);
     }
 
+    //Funções do Banco
+    function store(Request $request)
+    {
+        $request->validate(
+            Local::rules(),
+            Local::messages()
+        );
+
+        $dados = [
+            'nome'          => $request->nome,
+            'descricao'     => $request->descricao,
+            'telefone'      => $request->telefone,
+            'coordenada'    => $request->coordenada
+        ];
+        
+        //imagem
+        $imagem = $request->file('imagem');
+        $nome_arquivo = '';
+
+        if ($imagem) {
+            $diretorio = 'imagem/';
+            $nome_arquivo = date('YmdHis') . '.' . $imagem->getClientOriginalExtension();
+
+            $imagem->storeAs($diretorio, $nome_arquivo, 'public');
+
+            $dados['imagem'] = $diretorio . $nome_arquivo;
+        }
+
+        //acessibilidade
+        $acessibilidade = array();
+        //$input = $request->all();
+        //dd($input);
+        $tipo = ['caoGuia','lavabo','prioridade','palco','estacionamento','balcao','escada','rampa','elevador','refeitorio','sinalizacao','apoiador','outro'];
+
+        foreach($tipo as $chave){
+            if (boolval($request->$chave)) {
+                array_push($acessibilidade, $request->$chave);
+            }
+        }
+
+        $dados['acessibilidade'] = json_encode($acessibilidade);
+        dd($dados);
+
+        Local::create($dados);
+
+        return \redirect('local')->with('success', 'Cadastrado com sucesso!');
+    }
+
     function update(Request $request)
     {
         $request->validate(
@@ -92,26 +105,40 @@ class LocalController extends Controller
             Local::messages()
         );
 
-        //adiciono os dados do formulário ao vetor
         $dados = [
             'nome'          => $request->nome,
             'descricao'     => $request->descricao,
             'telefone'      => $request->telefone,
-            'coordenada'    => $request->coordenada,
-            'acessibilidade'=> $request->acessibilidade
+            'coordenada'    => $request->coordenada
         ];
-
+        
+        //imagem
         $imagem = $request->file('imagem');
-        //verifica se o campo imagem foi passado uma imagem
+        $nome_arquivo = '';
+
         if ($imagem) {
+            $diretorio = 'imagem/';
             $nome_arquivo = date('YmdHis') . '.' . $imagem->getClientOriginalExtension();
 
-            $diretorio = 'imagem/';
-            //salva a imagem em uma pasta
             $imagem->storeAs($diretorio, $nome_arquivo, 'public');
-            //adiciona ao vetor o diretorio do arquivo e o nome
+
             $dados['imagem'] = $diretorio . $nome_arquivo;
         }
+
+        //acessibilidade
+        $acessibilidade = array();
+        //$input = $request->all();
+        //dd($input);
+        $tipo = ['caoGuia','lavabo','prioridade','palco','estacionamento','balcao','escada','rampa','elevador','refeitorio','sinalizacao','apoiador','outro'];
+
+        foreach($tipo as $chave){
+            if (boolval($request->$chave)) {
+                array_push($acessibilidade, $request->$chave);
+            }
+        }
+
+        $dados['acessibilidade'] = json_encode($acessibilidade);
+        dd($dados);
 
         //metodo para atualizar passando o vetor com os dados do form e o id
         Local::updateOrCreate(
