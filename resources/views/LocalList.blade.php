@@ -16,13 +16,13 @@
 
                 <div class="col-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="campo" value="nome">
+                        <input class="form-check-input" type="radio" name="campo" value="nome">
                         <label class="form-check-label" for="campo">Nome</label><br>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="campo" value="telefone">
+                        <input class="form-check-input" type="radio" name="campo" value="telefone">
                         <label class="form-check-label" for="campo">Telefone</label><br>
                     </div>
                 </div>
