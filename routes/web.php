@@ -29,12 +29,6 @@ Route::get('/dashboard', function () {
 );
 
 Route::middleware('auth')->group(function () {
-    //Usuário
-    Route::resource('usuario', UsuarioController::class);
-    Route::post('usuario/search', [UsuarioController::class, 'search'])->name(
-        'usuario.search'
-    );//
-
     //Conta
     Route::get('/profile', [ProfileController::class, 'edit'])->name(
         'profile.edit'
@@ -44,6 +38,12 @@ Route::middleware('auth')->group(function () {
     );
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name(
         'profile.destroy'
+    );//
+
+    //Usuário
+    Route::resource('usuario', UsuarioController::class);
+    Route::post('usuario/search', [UsuarioController::class, 'search'])->name(
+        'usuario.search'
     );//
 
     //Local

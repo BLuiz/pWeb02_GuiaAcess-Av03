@@ -55,7 +55,7 @@
                     <td>{{ $item->nome }}</td>
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->assunto }}</td>
-                    <td>{{ $item->mensagem }}</td>
+                    <td style="word-break:break-word">{{ $item->mensagem }}</td>
                     <td> <!--Editar-->
                         <a href="{{ action('App\Http\Controllers\SuporteController@edit', $item->id) }}">
                             <i class='fa-solid fa-pen-to-square' style='color:orange;'></i>

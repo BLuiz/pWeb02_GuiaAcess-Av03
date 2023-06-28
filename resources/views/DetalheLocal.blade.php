@@ -28,7 +28,7 @@
                     <td></td>
                     <td>{{ $local->descricao }}</td>
                     <td>{{ $local->telefone }}</td>
-                    <td>{{ $local->coordenadas }}</td>
+                    <td>{{ $local->coordenada }}</td> <!--Se coordenada não mostrar é por causa disso-->
                     <td>
                     <td>{{ $local->acessibilidade }}</td>
                     <td> <!--Editar-->

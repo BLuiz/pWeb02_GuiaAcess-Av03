@@ -57,7 +57,7 @@
                     <div class="row">
                         <!--ID-->
                         <input type="hidden" name="id"
-                        value="@if (!empty(old('id'))) {{ old('id') }} @elseif(!empty($suporte->id)) {{ $suporte->id }} @else {{ '' }} @endif" /><br>
+                        value="@if(!empty(old('id'))){{old('id')}}@elseif(!empty($suporte->id)){{$suporte->id}}@else {{''}}@endif" /><br>
 
                         <!--Nome-->
                         <div class="col-md-6 form-group">
@@ -68,7 +68,7 @@
                         <!--Email-->
                         <div class="col-md-6 form-group mt-3 mt-md-0">
                             <input type="email" name="email" id="email" class="form-control" placeholder="Seu Email"
-                            value="@if (!empty(old('email'))) {{ old('email') }} @elseif(!empty($suporte->email)) {{ $suporte->email }} @else {{ '' }} @endif" /><br>
+                            value="@if(!empty(old('email'))){{old('email')}}@elseif(!empty($suporte->email)){{$suporte->email}}@else{{''}}@endif" /><br>
                         </div>
                     </div>
 
@@ -83,8 +83,10 @@
                     <div class="row">
                         <!--Descrição-->
                         <div class="form-group mt-3">
-                            <input type="text" name="mensagem" class="form-control" rows="5" placeholder="Mensagem" style="text-align:center; height:100px;"
-                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"><br>
+                            <!--<textarea type="text" name="mensagem" class="form-control" cols="30" rows="5" placeholder="Mensagem" style="text-align:left; height:100px;"
+                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"></textarea><br>-->
+                            <input type="text" name="mensagem" class="form-control" placeholder="Mensagem" style="height:100px;"
+                            value="@if(!empty(old('mensagem'))){{old('mensagem')}}@elseif(!empty($suporte->mensagem)){{$suporte->mensagem}}@else{{''}}@endif"/><br>
                         </div>
                     </div>
 

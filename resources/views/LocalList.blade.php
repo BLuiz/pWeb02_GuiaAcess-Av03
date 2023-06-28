@@ -42,28 +42,30 @@
     <!--Fim Busca-->
     <br>
 
-<section id="service" class="services pt-0">
-
-      <div class="row gy-4">
-        <!--Início Listagem-->
+    <!--Início Listagem de Cards-->
+    <section id="service" class="services pt-0">
+        <div class="row gy-4">
+        <!--Item de Card-->
         @foreach ($locals as $item)
         @php
-        $nome_imagem = !empty($item->imagem) ? $item->imagem : 'sem_imagem.jpg';
+            $nome_imagem = !empty($item->imagem) ? $item->imagem : 'sem_imagem.jpg';
         @endphp
-        <div class="col-lg-4 col-md-6 cardLugar" data-aos="fade-up" data-aos-delay="300">
-          <div class="card">
-            <div class="card-img">
-              <img src="/storage/{{ $nome_imagem }}" alt="" class="img-fluid">
+            <div class="col-lg-4 col-md-6 cardLugar" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/storage/{{ $nome_imagem }}" alt="" class="img-fluid">
+                    </div>
+                    <h3><a href="{{ action('App\Http\Controllers\LocalController@detalhe', $item->id) }}" class="stretched-link">{{ $item->nome }}</a></h3>
+                    <p>{{ $item->descricao }} <br><br>
+                    <strong>Endereço:</strong> {{ $item->coordenada }}</p>
+                </div>
             </div>
-            <h3><a href="{{ action('App\Http\Controllers\LocalController@detalhe', $item->id) }}" class="stretched-link">{{ $item->nome }}</a></h3>
-            <p>{{ $item->descricao }} <br><br>
-             <strong>Endereço:</strong> {{ $item->coordenada }}</p>
-          </div>
-        </div><!-- End Card Item -->
         @endforeach
+        <!--Item de Card-->
 
-    </div>
-  </section><!-- End Services Section -->
+        </div>
+    </section>
+    <!--Início Listagem de Cards-->
 
 </div>
 

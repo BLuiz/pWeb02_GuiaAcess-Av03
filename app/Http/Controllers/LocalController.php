@@ -75,10 +75,10 @@ class LocalController extends Controller
             'nome'          => $request->nome,
             'descricao'     => $request->descricao,
             'telefone'      => $request->telefone,
-            'coordenada'    => $request->coordenada
+            'coordenada'    => $request->coordenada,
+            'acessibilidade'=> json_encode($request->acessibilidade)
         ];
 
-        //imagem
         $imagem = $request->file('imagem');
         $nome_arquivo = '';
 
@@ -90,21 +90,6 @@ class LocalController extends Controller
 
             $dados['imagem'] = $diretorio . $nome_arquivo;
         }
-
-        //acessibilidade
-        $acessibilidade = array();
-        //$input = $request->all();
-        //dd($input);
-        $tipo = ['caoGuia','lavabo','prioridade','palco','estacionamento','balcao','escada','rampa','elevador','refeitorio','sinalizacao','apoiador','outro'];
-
-        foreach($tipo as $chave){
-            if (boolval($request->$chave)) {
-                array_push($acessibilidade, $request->$chave);
-            }
-        }
-
-        $dados['acessibilidade'] = json_encode($acessibilidade);
-        dd($dados);
 
         Local::create($dados);
 
@@ -122,10 +107,10 @@ class LocalController extends Controller
             'nome'          => $request->nome,
             'descricao'     => $request->descricao,
             'telefone'      => $request->telefone,
-            'coordenada'    => $request->coordenada
+            'coordenada'    => $request->coordenada,
+            'acessibilidade'=> json_encode($request->acessibilidade)
         ];
 
-        //imagem
         $imagem = $request->file('imagem');
         $nome_arquivo = '';
 
@@ -138,22 +123,6 @@ class LocalController extends Controller
             $dados['imagem'] = $diretorio . $nome_arquivo;
         }
 
-        //acessibilidade
-        $acessibilidade = array();
-        //$input = $request->all();
-        //dd($input);
-        $tipo = ['caoGuia','lavabo','prioridade','palco','estacionamento','balcao','escada','rampa','elevador','refeitorio','sinalizacao','apoiador','outro'];
-
-        foreach($tipo as $chave){
-            if (boolval($request->$chave)) {
-                array_push($acessibilidade, $request->$chave);
-            }
-        }
-
-        $dados['acessibilidade'] = json_encode($acessibilidade);
-        dd($dados);
-
-        //metodo para atualizar passando o vetor com os dados do form e o id
         Local::updateOrCreate(
             ['id' => $request->id],
             $dados
