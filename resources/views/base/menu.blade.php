@@ -44,13 +44,21 @@
                             <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\FeedbackController@create') }}"> Avaliação</a></li>
                         </ul>
                     </li>
+
+                    <li class="nav-item px-2 dropdown active">
+                        <a class="nav-link dropdown-toggle" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuários
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('/usuario') }}">Listar</a></li>
+                            <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\UsuarioController@create') }}"> Cadastrar</a></li>
+                        </ul>
+                    </li>
                     <!--Fim Links de Páginas-->
 
                     <!--Início Botão de Perfil-->
                     <li class="nav-item">
                         @guest
-                            
-                            
                             @if (Route::has('login-register'))
                             <li class="nav-item px-2">
                                 <a class="nav-link" href="{{ route('login-register') }}">{{ __('Conta') }}</a>

@@ -42,9 +42,9 @@
                         <h3 class="box-title mt-5">Acessibilidade: </h3>
                         <ul class="list-unstyled">
                         @foreach ($acessibilidade as $chave => $valor)
-                        @if ($valor)
+                        @if (boolval($valor))
                             <li><i class="fa fa-check text-success"></i> {{ $chave }}</li><br>
-                        @elseif (!$valor)
+                        @elseif (!boolval($valor))
                             <li><i class="fa fa-times text-danger" aria-hidden="true"></i> {{ $chave }}</li><br>
                         @endif
                         @endforeach

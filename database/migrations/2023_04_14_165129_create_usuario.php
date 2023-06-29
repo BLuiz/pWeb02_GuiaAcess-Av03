@@ -21,6 +21,22 @@ return new class extends Migration
             $table->string('imagem',150)->nullable();
             $table->timestamps();
         });
+
+        if(Schema::hasTable('categoria')){
+            Schema::disableForeignKeyConstraints();
+
+            Schema::table('usuario', function (Blueprint $table) {
+                $table->foreignId('categoria_id')
+                ->nullable()
+                ->default(null)
+                ->constrained('categoria')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+            });
+            
+            Schema::enableForeignKeyConstraints();
+        }
+
     }
 
     /**

@@ -19,13 +19,15 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::disableForeignKeyConstraints();
+        if(Schema::hasTable('usuario')){
+            Schema::disableForeignKeyConstraints();
 
-        Schema::table('usuario', function (Blueprint $table) {
-            $table->foreignId('categoria_id')->nullable()->constrained('categoria')->default(null);
-        });
-
-        Schema::enableForeignKeyConstraints();
+            Schema::table('usuario', function (Blueprint $table) {
+                $table->foreignId('categoria_id')->nullable()->constrained('categoria')->default(null);
+            });
+            
+            Schema::enableForeignKeyConstraints();
+        }
 
     }
 

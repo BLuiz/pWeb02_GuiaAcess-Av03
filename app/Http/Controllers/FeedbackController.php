@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Feedback;
 use App\Models\User;
 use App\Models\Local;
+use Illuminate\Support\Facades\Storage;
 
 class FeedbackController extends Controller
 {
@@ -146,14 +147,20 @@ class FeedbackController extends Controller
 
     function search(Request $request)
     {
-        if ($request->campo == 'nota') {
-            $feedbacks = Feedback::where(
-                'nota',
-                'like',
-                '%' . $request->valor . '%'
-            )->get();
-        } else {
-            $feedbacks = Feedback::all();
+        $pesquisa = ['nota', 'avaliacao', 'local_id', 'user_id'];
+        $all = 0;
+        foreach($pesquisa as $item){
+            if ($request->campo == $item) {
+                $feedbacks = Local::where(
+                    $item,
+                    'like',
+                    '%' . $request->valor . '%'
+                )->get();
+                $all++;
+            }
+        }
+        if($all=0){
+            $feedbacks = Local::all();
         }
 
         //dd($feedbacks);

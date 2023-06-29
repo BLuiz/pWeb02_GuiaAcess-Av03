@@ -156,6 +156,61 @@
             <br>
 
             <div class="row" data-aos="fade-up">
+            <div class="col-6" style="border-right: 2px solid lightgrey;">
+                <div class="cor-fonte">
+                    <h4><b>Sinalização</b></h4>
+                </div>
+                <h6>Sobre o seu estabelecimento..
+                    <br><br><p>Seu estabelecimento segue nas condições descritas no código de obras de Chapecó:</p>
+                    <p>Art. 43 Nas edificações de uso público ou de uso coletivo é obrigatória a existência de sinalização visual e tátil para orientação de pessoas portadoras de deficiência auditiva e visual, em conformidade com as normas técnicas de acessibilidade da ABNT.</p>
+                </h6>
+                <br><br><br>
+                <div class="contact-part">
+                    <div class="info-part">
+                        <h4>Assinale:</h4>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="0" checked id="press15"/>
+                    <label class="form-check-label" for="press15">Meu estabelecimento não tem sinalização visual e tátil ou tem mas não segue nenhuma norma.</label>
+                    <br>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="1" id="press16"/>
+                    <label class="form-check-label" for="press16">Meu estabelecimento tem sinalização visual e tátil e segue as normas.</label>
+                    <br>
+                </div>
+            </div>
+            
+            <div class="col-6">
+                <div class="cor-fonte">
+                    <h4><b>Estacionamento</b></h4>
+                </div>
+
+                <h6>Sobre o seu estabelecimento..
+                    <br><br><p>Seu estabelecimento segue nas condições descritas no código de obras de Chapecó:</p>
+                    <p>Segundo a Lei nº 13.146, de 2015, Art. 47. Em todas as áreas de estacionamento aberto ao público, de uso público ou privado de uso coletivo e em vias públicas, devem ser reservadas vagas próximas aos acessos de circulação de pedestres, devidamente sinalizadas, para veículos que transportem pessoa com deficiência com comprometimento de mobilidade, desde que devidamente identificados.</p>
+                    </h6>
+                <br>
+                <div class="contact-part">
+                    <div class="info-part">
+                        <h4>Assinale:</h4>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="0" checked id="press17"/>
+                    <label class="form-check-label" for="press17">Meu estabelecimento não tem estacionamento ou tem mas não segue nenhuma norma.</label>
+                    <br>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="1" id="press18"/>
+                    <label class="form-check-label" for="press18">Meu estabelecimento tem estacionamento e segue as normas.</label>
+                    <br>
+                </div>
+            </div>
+            </div>
+
+            <br>
+            <hr data-aos="fade-up">
+            <br>
+
+            <div class="row" data-aos="fade-up">
                 <div class="cor-fonte">
                     <h4><b>Lavabo</b></h4>
                 </div>
@@ -286,126 +341,6 @@
             <br>
 
             <div class="row" data-aos="fade-up">
-                <div class="col-6" style="border-right: 2px solid lightgrey;">
-                    <div class="cor-fonte">
-                        <h4><b>Elevador</b></h4>
-                    </div>
-                    <h6>Segundo o código de obras Art. 36 Será obrigatória a instalação de, no mínimo, 01 (um) elevador nas edificações, nas seguintes condições:
-                        <br><br><p>Seu estabelecimento segue as condições descritas abaixo sobre o elevador:</p>
-                        <p>I - nas edificações de até quatro pavimentos, de acordo com o Anexo I desta Lei Complementar, é obrigatório o uso de rampa, elevador ou plataforma elevatória, conforme normas técnicas de acessibilidade da ABNT;</p>
-                        <p>II - nas Edificações de mais de quatro pavimentos, ou cuja distância vertical do piso do pavimento de menor cota ao piso do pavimento de maior cota, for superior a 11, 00 metros.</p>
-                        <p>§ 1º Nas edificações de uso público será garantido o acesso em todos os pavimentos às pessoas com necessidades especiais através de rampas e/ou elevador a partir do 1º pavimento - Conforme NBR 9050 e NBR 13.994;</p>
-                        <p>§ 2º Nas edificações de uso coletivo, conforme regulamentação do Decreto Federal 5.296/2004 e Anexo I desta Lei Complementar, será garantido o acesso em todos os pavimentos às pessoas com deficiência física a partir do primeiro pavimento de acordo com a NBR 9050 e NBR 13.944;</p>
-                        <p>§ 4º No caso da instalação de elevadores novos ou da troca dos já existentes, qualquer que seja o número de elevadores da edificação de uso público ou de uso coletivo, pelo menos um deles terá cabine que permita acesso e movimentação cômoda de pessoa portadora de deficiência ou com mobilidade reduzida, de acordo com o que especifica as normas técnicas de acessibilidade da ABNT;</p>
-                        <p>§ 5º Junto às botoeiras externas do elevador, deverá estar identificado, em braile, em qual andar da edificação a pessoa se encontra</p>
-                    </h6>
-                    <br>
-                    <div class="contact-part">
-                        <div class="info-part">
-                            <h4>Assinale:</h4>
-                        </div>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="0" checked  id="press11"/>
-                        <label class="form-check-label" for="press11">Meu estabelecimento não tem elevador ou tem mas não segue nenhuma norma.</label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="1" id="press12"/>
-                        <label class="form-check-label" for="press12">Meu estabelecimento tem elevador e segue as normas.</label>
-                        <br>
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="cor-fonte">
-                        <h4><b>Refeitório</b></h4>
-                    </div>
-                    <h6>Você tem um  bar, café, restaurante, lanchonete ou similares?
-                        <br><br><p>Seu estabelecimento segue as condições descritas abaixo sobre o elevador:</p>
-                        <p>Art. 86 III - ter instalações sanitárias, separadas por sexo, conforme tabela específica, e que permita o acesso às pessoas com deficiência física (PCR), conforme prevê as normas da NBR 9050, incluindo nas instalações sanitárias lavatórios, bebedouros e vasos;</p>
-                        <p>Art. 86 V - os estabelecimentos previstos no caput deste artigo deverão observar o acesso à pessoas com deficiência física (PCR), sendo tais acessos construídos em conformidade com o que prevê a NBR 9050 da A.B.N.T.</p>
-                        <p>Art. 87 do Código de obras A construção ou reforma de bares, cafés, restaurantes, lanchonetes e similares, deve atender aos preceitos da acessibilidade na interligação de todas as partes de uso comum ou abertas ao público, conforme os padrões das normas técnicas de acessibilidade da ABNT.</p>
-                        <p>ABNT 10.8.1 Os restaurantes, refeitórios e bares devem possuir pelo menos 5 % do total de mesas;</p>
-                        <p>ABNT 10.8.1 Os restaurantes, refeitórios e bares devem possuir pelo menos 5 % do total de mesas, com no mínimo uma, acessíveis à P.C.R. Estas mesas devem ser interligadas a uma rota acessível e atender ao descrito em 9.3.2. A rota acessível deve incluir o acesso ao sanitário acessível.</p>
-                        <p>ABNT 10.8.2 As mesas devem ser distribuídas de forma a estar integradas às demais e em locais onde sejam oferecidos todos os serviços e comodidades disponíveis no estabelecimento.</p>
-                        <p>ABNT 10.8.2.3 Quando o local possuir cardápio, ao menos um exemplar deve estar em Braille e em texto com caracteres ampliados.</p>
-                    </h6>
-                    <br>
-                    <div class="contact-part">
-                        <div class="info-part">
-                            <h4>Assinale:</h4>
-                        </div>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="0" checked id="press13"/>
-                        <label class="form-check-label" for="press13">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label>
-                        <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="1" id="press14"/>
-                        <label class="form-check-label" for="press14">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label>
-                        <br>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <hr data-aos="fade-up">
-            <br>
-
-            <div class="row" data-aos="fade-up">
-            <div class="col-6" style="border-right: 2px solid lightgrey;">
-                <div class="cor-fonte">
-                    <h4><b>Sinalização</b></h4>
-                </div>
-                <h6>Sobre o seu estabelecimento..
-                    <br><br><p>Seu estabelecimento segue nas condições descritas no código de obras de Chapecó:</p>
-                    <p>Art. 43 Nas edificações de uso público ou de uso coletivo é obrigatória a existência de sinalização visual e tátil para orientação de pessoas portadoras de deficiência auditiva e visual, em conformidade com as normas técnicas de acessibilidade da ABNT.</p>
-                </h6>
-                <br><br><br>
-                <div class="contact-part">
-                    <div class="info-part">
-                        <h4>Assinale:</h4>
-                    </div>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="0" checked id="press15"/>
-                    <label class="form-check-label" for="press15">Meu estabelecimento não tem sinalização visual e tátil ou tem mas não segue nenhuma norma.</label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="1" id="press16"/>
-                    <label class="form-check-label" for="press16">Meu estabelecimento tem sinalização visual e tátil e segue as normas.</label>
-                    <br>
-                </div>
-            </div>
-            
-            <div class="col-6">
-                <div class="cor-fonte">
-                    <h4><b>Estacionamento</b></h4>
-                </div>
-
-                <h6>Sobre o seu estabelecimento..
-                    <br><br><p>Seu estabelecimento segue nas condições descritas no código de obras de Chapecó:</p>
-                    <p>Segundo a Lei nº 13.146, de 2015, Art. 47. Em todas as áreas de estacionamento aberto ao público, de uso público ou privado de uso coletivo e em vias públicas, devem ser reservadas vagas próximas aos acessos de circulação de pedestres, devidamente sinalizadas, para veículos que transportem pessoa com deficiência com comprometimento de mobilidade, desde que devidamente identificados.</p>
-                    </h6>
-                <br>
-                <div class="contact-part">
-                    <div class="info-part">
-                        <h4>Assinale:</h4>
-                    </div>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="0" checked id="press17"/>
-                    <label class="form-check-label" for="press17">Meu estabelecimento não tem estacionamento ou tem mas não segue nenhuma norma.</label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="1" id="press18"/>
-                    <label class="form-check-label" for="press18">Meu estabelecimento tem estacionamento e segue as normas.</label>
-                    <br>
-                </div>
-            </div>
-            </div>
-
-            <br>
-            <hr data-aos="fade-up">
-            <br>
-
-            <div class="row" data-aos="fade-up">
                 <div class="col-7" style="border-right: 2px solid lightgrey;">
                     <div class="cor-fonte">
                         <h4><b>Rampa</b></h4>
@@ -491,6 +426,71 @@
                     <input class="form-check-input" type="radio" name="acessibilidade[Apoiador]" value="1" id="press24"/>
                     <label class="form-check-label" for="press24">Meu estabelecimento tem maçanetas, barras antipânico e puxadores e segue as normas.</label>
                     <br>
+                </div>
+            </div>
+
+            <br>
+            <hr data-aos="fade-up">
+            <br>
+
+            <div class="row" data-aos="fade-up">
+                <div class="col-6" style="border-right: 2px solid lightgrey;">
+                    <div class="cor-fonte">
+                        <h4><b>Elevador</b></h4>
+                    </div>
+                    <h6>Segundo o código de obras Art. 36 Será obrigatória a instalação de, no mínimo, 01 (um) elevador nas edificações, nas seguintes condições:
+                        <br><br><p>Seu estabelecimento segue as condições descritas abaixo sobre o elevador:</p>
+                        <p>I - nas edificações de até quatro pavimentos, de acordo com o Anexo I desta Lei Complementar, é obrigatório o uso de rampa, elevador ou plataforma elevatória, conforme normas técnicas de acessibilidade da ABNT;</p>
+                        <p>II - nas Edificações de mais de quatro pavimentos, ou cuja distância vertical do piso do pavimento de menor cota ao piso do pavimento de maior cota, for superior a 11, 00 metros.</p>
+                        <p>§ 1º Nas edificações de uso público será garantido o acesso em todos os pavimentos às pessoas com necessidades especiais através de rampas e/ou elevador a partir do 1º pavimento - Conforme NBR 9050 e NBR 13.994;</p>
+                        <p>§ 2º Nas edificações de uso coletivo, conforme regulamentação do Decreto Federal 5.296/2004 e Anexo I desta Lei Complementar, será garantido o acesso em todos os pavimentos às pessoas com deficiência física a partir do primeiro pavimento de acordo com a NBR 9050 e NBR 13.944;</p>
+                        <p>§ 4º No caso da instalação de elevadores novos ou da troca dos já existentes, qualquer que seja o número de elevadores da edificação de uso público ou de uso coletivo, pelo menos um deles terá cabine que permita acesso e movimentação cômoda de pessoa portadora de deficiência ou com mobilidade reduzida, de acordo com o que especifica as normas técnicas de acessibilidade da ABNT;</p>
+                        <p>§ 5º Junto às botoeiras externas do elevador, deverá estar identificado, em braile, em qual andar da edificação a pessoa se encontra</p>
+                    </h6>
+                    <br>
+                    <div class="contact-part">
+                        <div class="info-part">
+                            <h4>Assinale:</h4>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="0" checked  id="press11"/>
+                        <label class="form-check-label" for="press11">Meu estabelecimento não tem elevador ou tem mas não segue nenhuma norma.</label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="1" id="press12"/>
+                        <label class="form-check-label" for="press12">Meu estabelecimento tem elevador e segue as normas.</label>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="cor-fonte">
+                        <h4><b>Refeitório</b></h4>
+                    </div>
+                    <h6>Você tem um  bar, café, restaurante, lanchonete ou similares?
+                        <br><br><p>Seu estabelecimento segue as condições descritas abaixo sobre o elevador:</p>
+                        <p>Art. 86 III - ter instalações sanitárias, separadas por sexo, conforme tabela específica, e que permita o acesso às pessoas com deficiência física (PCR), conforme prevê as normas da NBR 9050, incluindo nas instalações sanitárias lavatórios, bebedouros e vasos;</p>
+                        <p>Art. 86 V - os estabelecimentos previstos no caput deste artigo deverão observar o acesso à pessoas com deficiência física (PCR), sendo tais acessos construídos em conformidade com o que prevê a NBR 9050 da A.B.N.T.</p>
+                        <p>Art. 87 do Código de obras A construção ou reforma de bares, cafés, restaurantes, lanchonetes e similares, deve atender aos preceitos da acessibilidade na interligação de todas as partes de uso comum ou abertas ao público, conforme os padrões das normas técnicas de acessibilidade da ABNT.</p>
+                        <p>ABNT 10.8.1 Os restaurantes, refeitórios e bares devem possuir pelo menos 5 % do total de mesas;</p>
+                        <p>ABNT 10.8.1 Os restaurantes, refeitórios e bares devem possuir pelo menos 5 % do total de mesas, com no mínimo uma, acessíveis à P.C.R. Estas mesas devem ser interligadas a uma rota acessível e atender ao descrito em 9.3.2. A rota acessível deve incluir o acesso ao sanitário acessível.</p>
+                        <p>ABNT 10.8.2 As mesas devem ser distribuídas de forma a estar integradas às demais e em locais onde sejam oferecidos todos os serviços e comodidades disponíveis no estabelecimento.</p>
+                        <p>ABNT 10.8.2.3 Quando o local possuir cardápio, ao menos um exemplar deve estar em Braille e em texto com caracteres ampliados.</p>
+                    </h6>
+                    <br>
+                    <div class="contact-part">
+                        <div class="info-part">
+                            <h4>Assinale:</h4>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="0" checked id="press13"/>
+                        <label class="form-check-label" for="press13">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="1" id="press14"/>
+                        <label class="form-check-label" for="press14">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label>
+                        <br>
+                    </div>
                 </div>
             </div>
 

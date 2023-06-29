@@ -27,7 +27,7 @@ return new class extends Migration
         
         if(Schema::hasTable('feedback')){
             Schema::table('feedback', function (Blueprint $table) {
-                $table->foreignId('users_id')->constrained('users')->default(null);
+                $table->foreignId('user_id')->constrained('users')->default(null);
             });
         }
 

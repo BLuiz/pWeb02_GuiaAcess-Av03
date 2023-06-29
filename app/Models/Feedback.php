@@ -17,7 +17,7 @@ class Feedback extends Model
     public function local(){
         return $this->belongsTo(Local::class,'local_id','id');
     }
-    public function user(){
+    public function users(){        //aqui pode ser que dê erro
         return $this->belongsTo(User::class,'user_id','id');
     }
 

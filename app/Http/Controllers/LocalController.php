@@ -14,19 +14,17 @@ class LocalController extends Controller
     {
         $locals = Local::All();
 
-        return view('LocalList')->with(['locals' => $locals]);      //verificar nome do arquivo LocalList.php
+        return view('LocalList')->with(['locals' => $locals]);
     }
 
     function create()
     {
         //$categorias = Categoria::orderBy('nome')->get();
-        //dd($categorias);
-        return view('ParticipeForm');                                    //->with(['categorias' => $categorias]);
+        return view('ParticipeForm');                    //->with(['categorias' => $categorias]);
     }
 
     function edit($id)
     {
-        //select * from local where id = $id;
         $local = Local::findOrFail($id);
 
         //$categorias = Categoria::orderBy('nome')->get();      //se tiver alguma chave estrangeira
@@ -39,7 +37,6 @@ class LocalController extends Controller
 
     function show($id)
     {
-        //select * from local where id = $id;
         $local = Local::findOrFail($id);
 
         //$categorias = Categoria::orderBy('nome')->get();      //se tiver alguma chave estrangeira
@@ -52,7 +49,6 @@ class LocalController extends Controller
 
     function detalhe($id)
     {
-        //select * from local where id = $id;
         $local = Local::findOrFail($id);
 
         //$categorias = Categoria::orderBy('nome')->get();      //se tiver alguma chave estrangeira
@@ -112,7 +108,6 @@ class LocalController extends Controller
         ];
 
         $imagem = $request->file('imagem');
-        $nome_arquivo = '';
 
         if ($imagem) {
             $diretorio = 'imagem/';
@@ -135,7 +130,6 @@ class LocalController extends Controller
     {
         $local = Local::findOrFail($id);
 
-        //verifica se existe o arquivo vinculado ao registro e depois remove
         if (Storage::disk('public')->exists($local->imagem)) {
             Storage::disk('public')->delete($local->imagem);
         }
@@ -144,9 +138,9 @@ class LocalController extends Controller
         return \redirect('local')->with('success', 'Removido com sucesso!');
     }
 
-    function search(Request $request)               //talvez não esteja funcionando
+    function search(Request $request)
     {
-        $pesquisa = ['nome', 'telefone'];
+        $pesquisa = ['nome', 'telefone', 'descricao', 'coordenada' /*'acessibilidade'*/];
         $all = 0;
         foreach($pesquisa as $item){
             if ($request->campo == $item) {
@@ -162,6 +156,6 @@ class LocalController extends Controller
             $locals = Local::all();
         }
 
-        return view('LocalList')->with(['locals' => $locals]);      //verificar nome do arquivo LocalList.php
+        return view('LocalList')->with(['locals' => $locals]);
     }
 }
