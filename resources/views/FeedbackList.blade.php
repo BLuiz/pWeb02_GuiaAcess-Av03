@@ -54,11 +54,13 @@
                     <td>{{ $item->nota }}</td>
                     <td>{{ $item->avaliacao }}</td>
                     @if(boolval($item->local))
-                        <td>{{ $item->local->nome }}</td>
+                        <td>
+                            <!--<p><a href="{{ action('App\Http\Controllers\LocalController@detalhe', $item->local->id) }}" class="stretched-link"> colocar nome aqui!! </a></p>-->
+                            {{ $item->local->nome }}
+                        </td>
                     @else
                         <td> - </td>
                     @endif
-                    @if(boolval($item->categoria))
                     <td>{{ $item->users->name }}</td>
                     <td> <!--Editar-->
                         <a href="{{ action('App\Http\Controllers\FeedbackController@edit', $item->id) }}">
