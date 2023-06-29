@@ -51,7 +51,11 @@
                 <td>{{ $item->nome }}</td>
                 <td>{{ $item->telefone }}</td>
                 <td>{{ $item->email }}</td>
-                <td>{{ $item->categoria }}</td>
+                @if(boolval($item->categoria))
+                    <td>{{ $item->categoria->nome }}</td>
+                @else
+                    <td> - </td>
+                @endif
                 <td><img src="/storage/{{ $nome_imagem }}" width="100px" class="img-thumbnail" /> </td>
                 <td><a href="{{ action('App\Http\Controllers\UsuarioController@edit', $item->id) }}"><i
                             class='fa-solid fa-pen-to-square' style='color:orange;'></i></a></td>

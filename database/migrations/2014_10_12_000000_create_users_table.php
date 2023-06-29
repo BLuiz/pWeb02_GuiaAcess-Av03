@@ -30,9 +30,9 @@ return new class extends Migration
                 $table->foreignId('users_id')
                 ->nullable()
                 ->default(null)
-                ->constrained('users')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+                ->constrained('users');
+                //->cascadeOnDelete()
+                //->cascadeOnUpdate();
             });
         }
 

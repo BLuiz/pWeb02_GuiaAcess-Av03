@@ -31,9 +31,9 @@ return new class extends Migration
                 $table->foreignId('local_id')
                 ->nullable()
                 ->default(null)
-                ->constrained('local')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+                ->constrained('local');
+                //->cascadeOnDelete()
+                //->cascadeOnUpdate();
             });
         }
 

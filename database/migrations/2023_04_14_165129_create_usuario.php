@@ -29,9 +29,9 @@ return new class extends Migration
                 $table->foreignId('categoria_id')
                 ->nullable()
                 ->default(null)
-                ->constrained('categoria')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+                ->constrained('categoria');
+                //->cascadeOnDelete()
+                //->cascadeOnUpdate();
             });
             
             Schema::enableForeignKeyConstraints();
