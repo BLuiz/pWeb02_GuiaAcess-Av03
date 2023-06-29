@@ -90,7 +90,7 @@
                         $nome_imagem = !empty($local->imagem) ? $local->imagem : 'sem_imagem.jpg';
                     @endphp
 
-                    <div class="row p-3" style="width: 45%;">
+                    <div class="row p-3" style="width: 85%;">
                         <img class="img-thumbnail" src="/storage/{{ $nome_imagem }}"/>
                     </div><br>
                     <div class="row p-3">
@@ -179,7 +179,7 @@
                     <br>
                 </div>
             </div>
-            
+
             <div class="col-6">
                 <div class="cor-fonte">
                     <h4><b>Estacionamento</b></h4>

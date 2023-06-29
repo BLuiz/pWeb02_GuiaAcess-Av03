@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Local;
 use App\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class LocalController extends Controller
 {
@@ -130,9 +131,11 @@ class LocalController extends Controller
     {
         $local = Local::findOrFail($id);
 
+        if(!empty($local->imagem)){
         if (Storage::disk('public')->exists($local->imagem)) {
             Storage::disk('public')->delete($local->imagem);
-        }
+        }}
+
         $local->delete();
 
         return \redirect('local')->with('success', 'Removido com sucesso!');

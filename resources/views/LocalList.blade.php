@@ -43,7 +43,7 @@
     <br>
 
     <!--Início Listagem de Cards-->
-    <section id="service" class="services pt-0">
+    <section >
         <div class="row gy-4">
         <!--Item de Card-->
         @foreach ($locals as $item)

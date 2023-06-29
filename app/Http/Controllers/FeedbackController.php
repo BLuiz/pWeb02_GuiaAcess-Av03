@@ -139,9 +139,6 @@ class FeedbackController extends Controller
         $feedback = Feedback::findOrFail($id);
 
         //verifica se existe o arquivo vinculado ao registro e depois remove
-        if (Storage::disk('public')->exists($feedback->imagem)) {
-            Storage::disk('public')->delete($feedback->imagem);
-        }
         $feedback->delete();
 
         return \redirect('feedback')->with('success', 'Removido com sucesso!');
