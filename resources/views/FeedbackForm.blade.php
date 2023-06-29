@@ -16,7 +16,7 @@
     <div class="container" style="margin-top: 3rem">
 
       <div class="section-title section-title1" data-aos="fade-up">
-        <h2>Feedback</h2>
+      <h2>FEEDBACK</h2>
         <p>Avaliem</p>
       </div>
             <!--Início Cadastro de Suporte-->
@@ -31,7 +31,7 @@
                         <!--ID-->
                         <input type="hidden" name="id" value="
                         @if(!empty(old('id'))){{old('id')}}@elseif(!empty($feedback->id)){{$feedback->id}}@else{{''}}@endif"/><br>
-                        <input type="hidden" name="user_id"
+                        <input type="hidden" name="users_id"
                         value="{{Auth::user()->id}}"/><br>
 
                         <!--Nome-->

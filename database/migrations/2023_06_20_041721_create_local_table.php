@@ -28,7 +28,12 @@ return new class extends Migration
         
         if(Schema::hasTable('feedback')){
             Schema::table('feedback', function (Blueprint $table) {
-                $table->foreignId('local_id')->constrained('local')->default(null);
+                $table->foreignId('local_id')
+                ->nullable()
+                ->default(null)
+                ->constrained('local')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
             });
         }
 

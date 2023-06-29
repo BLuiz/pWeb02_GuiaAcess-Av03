@@ -11,14 +11,14 @@ class Feedback extends Model
     protected $table = "feedback";
 
     protected $fillable = [
-        'nota', 'avaliacao', 'local_id', 'user_id'
+        'nota', 'avaliacao', 'local_id', 'users_id'
     ];
 
     public function local(){
         return $this->belongsTo(Local::class,'local_id','id');
     }
     public function users(){        //aqui pode ser que dê erro
-        return $this->belongsTo(User::class,'user_id','id');
+        return $this->belongsTo(User::class,'users_id','id');
     }
 
     public static function rules(){

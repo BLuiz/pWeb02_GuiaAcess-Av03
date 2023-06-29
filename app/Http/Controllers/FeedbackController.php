@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class FeedbackController extends Controller
 {
+    //Funções de retorno de Páginas
     function index()
     {
         $feedbacks = Feedback::All();
@@ -22,47 +23,11 @@ class FeedbackController extends Controller
     {
         $locals = Local::orderBy('nome')->get();
         $users = User::orderBy('name')->get();
-        //dd($locals);
+        //dd($users);
         return view('FeedbackForm')->with([
             'locals' => $locals,
             'users' => $users,
         ]);
-    }
-
-    function store(Request $request)
-    {
-        $request->validate(
-            Feedback::rules(),
-            Feedback::messages()
-        );
-
-        //adiciono os dados do formulário ao vetor
-        $dados = [
-            'local_id'  => $request->local_id,
-            'avaliacao' => $request->avaliacao,
-            'nota'      => $request->nota,
-            'user_id'   => $request->user_id,
-        ];
-
-        $imagem = $request->file('imagem');
-        $nome_arquivo = '';
-        //verifica se o campo imagem foi passado uma imagem
-        if ($imagem) {
-            $nome_arquivo = date('YmdHis') . '.' . $imagem->getClientOriginalExtension();
-
-            $diretorio = 'imagem/';
-            //salva a imagem em uma pasta
-            $imagem->storeAs($diretorio, $nome_arquivo, 'public');
-            //adiciona ao vetor o diretorio do arquivo e o nome
-            $dados['imagem'] = $diretorio . $nome_arquivo;
-        }
-
-        //dd( $request->nome);
-        //passa o vetor com os dados do formulário como parametro para ser salvo
-        Feedback::create($dados);
-
-        return \redirect('feedback')->with('success', 'Cadastrado com sucesso!');
-
     }
 
     function edit($id)
@@ -71,7 +36,7 @@ class FeedbackController extends Controller
         $feedback = Feedback::findOrFail($id);
         //dd($feedback);
         $locals = Local::orderBy('nome')->get();
-        $users = User::orderBy('nome')->get();
+        $users = User::orderBy('name')->get();
 
         return view('FeedbackForm')->with([
             'feedback' => $feedback,
@@ -95,6 +60,43 @@ class FeedbackController extends Controller
         ]);
     }
 
+    //Funções no Banco
+    function store(Request $request)
+    {
+        $request->validate(
+            Feedback::rules(),
+            Feedback::messages()
+        );
+
+        //adiciono os dados do formulário ao vetor
+        $dados = [
+            'local_id'  => $request->local_id,
+            'avaliacao' => $request->avaliacao,
+            'nota'      => $request->nota,
+            'users_id'   => $request->users_id,
+        ];
+
+        $imagem = $request->file('imagem');
+        $nome_arquivo = '';
+        //verifica se o campo imagem foi passado uma imagem
+        if ($imagem) {
+            $nome_arquivo = date('YmdHis') . '.' . $imagem->getClientOriginalExtension();
+
+            $diretorio = 'imagem/';
+            //salva a imagem em uma pasta
+            $imagem->storeAs($diretorio, $nome_arquivo, 'public');
+            //adiciona ao vetor o diretorio do arquivo e o nome
+            $dados['imagem'] = $diretorio . $nome_arquivo;
+        }
+
+        //dd( $request->nome);
+        //passa o vetor com os dados do formulário como parametro para ser salvo
+        Feedback::create($dados);
+
+        return \redirect('feedback')->with('success', 'Cadastrado com sucesso!');
+
+    }
+
     function update(Request $request)
     {
         //dd( $request->nome);
@@ -105,10 +107,10 @@ class FeedbackController extends Controller
 
         //adiciono os dados do formulário ao vetor
         $dados =  [
-            'nota' => $request->nome,
-            'avaliacao' => $request->telefone,
-            'local_id' => $request->local_id,
-            'user_id' => $request->user_id,
+            'local_id'  => $request->local_id,
+            'avaliacao' => $request->avaliacao,
+            'nota'      => $request->nota,
+            'users_id'   => $request->users_id,
         ];
 
         $imagem = $request->file('imagem');

@@ -5,7 +5,7 @@
 
 <div class="container" style="margin-top: 8rem">
     <div class="section-title section-title1" data-aos="fade-up">
-        <h2>FEEDBACK DOS USUARIOS</h2></h2>
+        <h2>FEEDBACK DOS USUÁRIOS</h2></h2>
         <p>Avaliações</p>
     </div>
 
@@ -54,7 +54,7 @@
                     <td>{{ $item->nota }}</td>
                     <td>{{ $item->avaliacao }}</td>
                     <td>{{ $item->local->nome }}</td>
-                    <td>{{ $item->user->name }}</td>
+                    <td>{{ $item->users->name }}</td>
                     <td> <!--Editar-->
                         <a href="{{ action('App\Http\Controllers\FeedbackController@edit', $item->id) }}">
                             <i class='fa-solid fa-pen-to-square' style='color:orange;'></i>
