@@ -5,7 +5,7 @@
 
 <div class="container" style="margin-top: 8rem">
     <div class="section-title section-title1" data-aos="fade-up">
-        <h2>Questões frequentemente perguntadas</h2></h2>
+        <h2>QUESTÕES FREQUENTEMENTE PERGUNTADAS</h2>
         <p>Suporte</p>
     </div>
 

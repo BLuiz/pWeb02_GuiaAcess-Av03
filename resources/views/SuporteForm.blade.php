@@ -16,7 +16,7 @@
     <div class="container" style="margin-top: 3rem">
 
       <div class="section-title section-title1" data-aos="fade-up">
-        <h2>Contato</h2>
+        <h2>CONTATO</h2>
         <p>Contate-nos</p>
       </div>
 

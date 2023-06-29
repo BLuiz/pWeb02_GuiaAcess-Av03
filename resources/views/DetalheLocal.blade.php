@@ -6,7 +6,7 @@
 <div class="container" style="margin-top: 8rem">
 
     <div class="section-title section-title1" data-aos="fade-up">
-        <h2>Detalhe de Local</h2>
+        <h2>DETALHES DO LOCAL</h2>
         <p>{{ $local->nome }}</p>
     </div>
 
