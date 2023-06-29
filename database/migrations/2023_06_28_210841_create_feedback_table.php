@@ -19,6 +19,21 @@ return new class extends Migration
             $table->string('avaliacao',200);
             $table->timestamps();
         });
+
+        Schema::disableForeignKeyConstraints();
+        
+        if(Schema::hasTable('users')){
+            Schema::table('feedback', function (Blueprint $table) {
+                $table->foreignId('users_id')->constrained('users')->default(null);
+            });
+        }
+        if(Schema::hasTable('local')){
+            Schema::table('feedback', function (Blueprint $table) {
+                $table->foreignId('local_id')->constrained('local')->default(null);
+            });
+        }
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

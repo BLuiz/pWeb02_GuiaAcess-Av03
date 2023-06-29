@@ -21,15 +21,16 @@ return new class extends Migration
             $table->string('coordenada', 40);
             $table->string('imagem', 150)->nullable();
             $table->json('acessibilidade')->nullable();
-         //   $table->string('acessibilidade', 20); //vetor?
             $table->timestamps();
         });
 
         Schema::disableForeignKeyConstraints();
-
-        Schema::table('feedback', function (Blueprint $table) {
-            $table->foreignId('local_id')->constrained('local')->default(null);
-        });
+        
+        if(Schema::hasTable('feedback')){
+            Schema::table('feedback', function (Blueprint $table) {
+                $table->foreignId('local_id')->constrained('local')->default(null);
+            });
+        }
 
         Schema::enableForeignKeyConstraints();
     }

@@ -24,12 +24,15 @@ return new class extends Migration
         });
 
         Schema::disableForeignKeyConstraints();
-
-        Schema::table('feedback', function (Blueprint $table) {
-            $table->foreignId('users_id')->constrained('users')->default(null);
-        });
+        
+        if(Schema::hasTable('feedback')){
+            Schema::table('feedback', function (Blueprint $table) {
+                $table->foreignId('users_id')->constrained('users')->default(null);
+            });
+        }
 
         Schema::enableForeignKeyConstraints();
+
     }
 
     /**
