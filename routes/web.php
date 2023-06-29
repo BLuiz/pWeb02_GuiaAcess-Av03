@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\SuporteController;
+use App\Http\Controllers\FeedbackController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -38,13 +39,13 @@ Route::middleware('auth')->group(function () {
     );
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name(
         'profile.destroy'
-    );//
+    );
 
     //Usuário
     Route::resource('usuario', UsuarioController::class);
     Route::post('usuario/search', [UsuarioController::class, 'search'])->name(
         'usuario.search'
-    );//
+    );
 
     //Local
     Route::resource('local', LocalController::class);
@@ -53,13 +54,19 @@ Route::middleware('auth')->group(function () {
     );
     Route::get('local/detalhe/{id}', [LocalController::class, 'detalhe'])->name(
         'local.detalhe'
-    );//
+    );
 
     //Suporte
     Route::resource('suporte', SuporteController::class);
     Route::post('suporte/search', [SuporteController::class, 'search'])->name(
         'suporte.search'
-    );//
+    );
+
+    //Feedback
+    Route::resource('feedback', FeedbackController::class);
+    Route::post('feedback/search', [FeedbackController::class, 'search'])->name(
+        'feedback.search'
+    );
 });
 
 require __DIR__ . '/auth.php';

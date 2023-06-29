@@ -24,18 +24,14 @@ return new class extends Migration
          //   $table->string('acessibilidade', 20); //vetor?
             $table->timestamps();
         });
-        /*
+
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('local_acessibilidade', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome', 50);
-            $table->foreignId('local_id')->nullable()->constrained('local')->default(null);
-            $table->timestamps();
+        Schema::table('feedback', function (Blueprint $table) {
+            $table->foreignId('local_id')->constrained('local')->default(null);
         });
-        Schema::enableForeignKeyConstraints();
-        */
 
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -48,3 +44,4 @@ return new class extends Migration
         Schema::dropIfExists('locals');
     }
 };
+

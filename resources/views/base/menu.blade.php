@@ -39,7 +39,9 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/suporte') }}">FAQ</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/feedback') }}">Feedback</a></li>
                             <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\SuporteController@create') }}"> Contato</a></li>
+                            <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\FeedbackController@create') }}"> Avaliação</a></li>
                         </ul>
                     </li>
                     <!--Fim Links de Páginas-->

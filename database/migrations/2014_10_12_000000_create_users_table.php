@@ -22,6 +22,14 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::disableForeignKeyConstraints();
+
+        Schema::table('feedback', function (Blueprint $table) {
+            $table->foreignId('users_id')->constrained('users')->default(null);
+        });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

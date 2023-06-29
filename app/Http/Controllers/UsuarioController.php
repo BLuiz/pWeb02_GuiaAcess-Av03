@@ -92,7 +92,7 @@ class UsuarioController extends Controller
             Usuario::rules(),
             Usuario::messages()
         );
-        
+
         //adiciono os dados do formulário ao vetor
         $dados =  [
             'nome' => $request->nome,
