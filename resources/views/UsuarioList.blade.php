@@ -2,7 +2,11 @@
 
 @section('conteudo')
 @section('tituloPagina', 'Listagem de Usuários')
-<h1>Listagem de Usuários</h1>
+<div class="container" style="margin-top: 8rem;">
+<div class="section-title section-title1" data-aos="fade-up">
+        <h2>LISTAGEM DE USUÁRIO</h2>
+        <p>Listagem</p>
+    </div>
 <form action="{{ route('usuario.search') }}" method="post">
     @csrf
     <div class="row">
@@ -32,8 +36,9 @@
             <th scope="col">Telefone</th>
             <th scope="col">Email</th>
             <th scope="col">Categoria</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col">Imagem</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
         </tr>
     </thead>
     <tbody>
@@ -46,7 +51,7 @@
                 <td>{{ $item->nome }}</td>
                 <td>{{ $item->telefone }}</td>
                 <td>{{ $item->email }}</td>
-                <td>{{ $item->categoria->nome }}</td>
+                <td>{{ $item->categoria }}</td>
                 <td><img src="/storage/{{ $nome_imagem }}" width="100px" class="img-thumbnail" /> </td>
                 <td><a href="{{ action('App\Http\Controllers\UsuarioController@edit', $item->id) }}"><i
                             class='fa-solid fa-pen-to-square' style='color:orange;'></i></a></td>

@@ -5,7 +5,7 @@
 
 <div class="container" style="margin-top: 8rem">
     <div class="section-title section-title1" data-aos="fade-up">
-        <h2>FEEDBACK DOS USUARIOS</h2></h2>
+        <h2>FEEDBACK DOS USUÁRIOS</h2></h2>
         <p>Avaliações</p>
     </div>
 

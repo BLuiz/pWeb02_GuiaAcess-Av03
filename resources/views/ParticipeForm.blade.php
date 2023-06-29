@@ -12,7 +12,7 @@
 
 <div class="container" style="margin-top: 8rem">
     <div class="section-title section-title1" data-aos="fade-up">
-        <h2>Formulário de Local</h2>
+        <h2>FORMULÁRIO DE LOCAL</h2>
         <p>Participe do Projeto</p>
     </div>
 
