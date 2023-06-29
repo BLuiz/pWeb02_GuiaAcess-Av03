@@ -38,8 +38,8 @@
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="autorizacao" value="acesso" required/>
-                <label class="form-check-label">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
+                <input class="form-check-input" type="radio" name="autorizacao" value="acesso" required id="press"/>
+                <label class="form-check-label" for="press">Eu concordo com a premissa do projeto e autorizo todas as suas diretrizes.</label>
             </div>
         </div>
         <!--Fim Termos-->
@@ -90,8 +90,8 @@
                         $nome_imagem = !empty($local->imagem) ? $local->imagem : 'sem_imagem.jpg';
                     @endphp
 
-                    <div class="row p-3">
-                        <img class="img-thumbnail" src="/storage/{{ $nome_imagem }}" />
+                    <div class="row p-3" style="width: 45%;">
+                        <img class="img-thumbnail" src="/storage/{{ $nome_imagem }}"/>
                     </div><br>
                     <div class="row p-3">
                         <input type="file" class="form-control" name="imagem" /><br>
@@ -142,11 +142,11 @@
                     </div>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Cão-guia]" value="0" checked/>
-                    <label class="form-check-label">Meu estabelecimento não tem acesso a cão-guia ou tem mas não segue nenhuma norma.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Cão-guia]" value="0" checked id="press1"/>
+                    <label class="form-check-label" for="press1">Meu estabelecimento não tem acesso a cão-guia ou tem mas não segue nenhuma norma.</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Cão-guia]" value="1" />
-                    <label class="form-check-label">Meu estabelecimento tem acesso a cão-guia e segue as normas.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Cão-guia]" value="1" id="press2"/>
+                    <label class="form-check-label" for="press2">Meu estabelecimento tem acesso a cão-guia e segue as normas.</label>
                     <br>
                 </div>
             </div>
@@ -174,11 +174,11 @@
                     </div>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Lavabo acessivel]" value="0" checked/>
-                    <label class="form-check-label">Meu estabelecimento não tem banheiro acessível ou tem mas não segue nenhuma norma.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Lavabo acessivel]" value="0" checked id="press3"/>
+                    <label class="form-check-label" for="press3">Meu estabelecimento não tem banheiro acessível ou tem mas não segue nenhuma norma.</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Lavabo acessivel]" value="1" />
-                    <label class="form-check-label">Meu estabelecimento tem banheiro acessível e segue as normas.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Lavabo acessivel]" value="1" id="press4"/>
+                    <label class="form-check-label" for="press4">Meu estabelecimento tem banheiro acessível e segue as normas.</label>
                     <br>
                 </div>
             </div>
@@ -206,11 +206,11 @@
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Prioridade no atendimento]" value="0" checked/>
-                        <label class="form-check-label">Meu estabelecimento não tem atendimento prioritário ou tem mas não segue nenhuma norma.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Prioridade no atendimento]" value="0" checked id="press5"/>
+                        <label class="form-check-label" for="press5">Meu estabelecimento não tem atendimento prioritário ou tem mas não segue nenhuma norma.</label>
                         <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Prioridade no atendimento]" value="1" />
-                        <label class="form-check-label">Meu estabelecimento tem atendimento prioritário e segue as normas.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Prioridade no atendimento]" value="1" id="press6" />
+                        <label class="form-check-label" for="press6">Meu estabelecimento tem atendimento prioritário e segue as normas.</label>
                         <br>
                     </div>
                 </div>
@@ -233,11 +233,11 @@
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Palco para interprete]" value="0" checked/>
-                        <label class="form-check-label">Meu estabelecimento não tem palco ou tem mas não segue nenhuma norma.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Palco para interprete]" value="0" checked id="press7"/>
+                        <label class="form-check-label" for="press7">Meu estabelecimento não tem palco ou tem mas não segue nenhuma norma.</label>
                         <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Palco para interprete]" value="1" />
-                        <label class="form-check-label">Meu estabelecimento tem palco e segue as normas.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Palco para interprete]" value="1" id="press8"/>
+                        <label class="form-check-label" for="press8">Meu estabelecimento tem palco e segue as normas.</label>
                         <br>
                     </div>
                 </div>
@@ -272,11 +272,11 @@
                     </div>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Balcão acessivel]" value="0" checked/>
-                    <label class="form-check-label">Meu estabelecimento não tem balcão, bilheterias e balcões de informação ou tem mas não segue nenhuma norma.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Balcão acessivel]" value="0" checked id="press9"/>
+                    <label class="form-check-label" for="press9">Meu estabelecimento não tem balcão, bilheterias e balcões de informação ou tem mas não segue nenhuma norma.</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Balcão acessivel]" value="1" />
-                    <label class="form-check-label">Meu estabelecimento tem balcão, bilheterias e balcões de informação e segue as normas.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Balcão acessivel]" value="1" id="press10"/>
+                    <label class="form-check-label" for="press10">Meu estabelecimento tem balcão, bilheterias e balcões de informação e segue as normas.</label>
                     <br>
                 </div>
             </div>
@@ -306,11 +306,11 @@
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="0" checked/>
-                        <label class="form-check-label">Meu estabelecimento não tem elevador ou tem mas não segue nenhuma norma.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="0" checked  id="press11"/>
+                        <label class="form-check-label" for="press11">Meu estabelecimento não tem elevador ou tem mas não segue nenhuma norma.</label>
                         <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="1" />
-                        <label class="form-check-label">Meu estabelecimento tem elevador e segue as normas.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Elevador acessivel]" value="1" id="press12"/>
+                        <label class="form-check-label" for="press12">Meu estabelecimento tem elevador e segue as normas.</label>
                         <br>
                     </div>
                 </div>
@@ -336,11 +336,11 @@
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="0" checked/>
-                        <label class="form-check-label">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="0" checked id="press13"/>
+                        <label class="form-check-label" for="press13">Meu estabelecimento não é um bar, café, restaurante, lanchonete ou similares ou é mas não segue nenhuma norma.</label>
                         <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="1" />
-                        <label class="form-check-label">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Refeitorio acessivel]" value="1" id="press14"/>
+                        <label class="form-check-label" for="press14">Meu estabelecimento é um bar, café, restaurante, lanchonete ou similares e segue as normas.</label>
                         <br>
                     </div>
                 </div>
@@ -351,6 +351,7 @@
             <br>
 
             <div class="row" data-aos="fade-up">
+            <div class="col-6" style="border-right: 2px solid lightgrey;">
                 <div class="cor-fonte">
                     <h4><b>Sinalização</b></h4>
                 </div>
@@ -358,27 +359,23 @@
                     <br><br><p>Seu estabelecimento segue nas condições descritas no código de obras de Chapecó:</p>
                     <p>Art. 43 Nas edificações de uso público ou de uso coletivo é obrigatória a existência de sinalização visual e tátil para orientação de pessoas portadoras de deficiência auditiva e visual, em conformidade com as normas técnicas de acessibilidade da ABNT.</p>
                 </h6>
-                <br>
+                <br><br><br>
                 <div class="contact-part">
                     <div class="info-part">
                         <h4>Assinale:</h4>
                     </div>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="0" checked/>
-                    <label class="form-check-label">Meu estabelecimento não tem sinalização visual e tátil ou tem mas não segue nenhuma norma.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="0" checked id="press15"/>
+                    <label class="form-check-label" for="press15">Meu estabelecimento não tem sinalização visual e tátil ou tem mas não segue nenhuma norma.</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="1" />
-                    <label class="form-check-label">Meu estabelecimento tem sinalização visual e tátil e segue as normas.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Sinalizacão]" value="1" id="press16"/>
+                    <label class="form-check-label" for="press16">Meu estabelecimento tem sinalização visual e tátil e segue as normas.</label>
                     <br>
                 </div>
             </div>
-
-            <br>
-            <hr data-aos="fade-up">
-            <br>
-
-            <div class="row" data-aos="fade-up">
+            
+            <div class="col-6">
                 <div class="cor-fonte">
                     <h4><b>Estacionamento</b></h4>
                 </div>
@@ -394,13 +391,14 @@
                     </div>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="0" checked/>
-                    <label class="form-check-label">Meu estabelecimento não tem estacionamento ou tem mas não segue nenhuma norma.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="0" checked id="press17"/>
+                    <label class="form-check-label" for="press17">Meu estabelecimento não tem estacionamento ou tem mas não segue nenhuma norma.</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="1" />
-                    <label class="form-check-label">Meu estabelecimento tem estacionamento e segue as normas.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Estacionamento prioritario]" value="1" id="press18"/>
+                    <label class="form-check-label" for="press18">Meu estabelecimento tem estacionamento e segue as normas.</label>
                     <br>
                 </div>
+            </div>
             </div>
 
             <br>
@@ -428,11 +426,11 @@
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Rampa]" value="0" checked/>
-                        <label class="form-check-label">Meu estabelecimento não tem rampa ou tem mas não segue nenhuma norma.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Rampa]" value="0" checked id="press19"/>
+                        <label class="form-check-label" for="press19">Meu estabelecimento não tem rampa ou tem mas não segue nenhuma norma.</label>
                         <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Rampa]" value="1" />
-                        <label class="form-check-label">Meu estabelecimento tem rampa e segue as normas.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Rampa]" value="1" id="press20"/>
+                        <label class="form-check-label" for="press20">Meu estabelecimento tem rampa e segue as normas.</label>
                         <br>
                     </div>
                 </div>
@@ -448,18 +446,18 @@
                         <p>Art. 31 IV - nos trechos circulares em leque ou em caracol das escadas, os pisos dos degraus deverão ter profundidade mínima de 0,06 m, nos bordos internos e 0,25 m no centro do vão;</p>
                         <p>Art. 31 V - ter balaustrada ou corrimão fixado a altura entre 0,80 a 0,92cm e que atenda à NBR 9050 da ABNT;</p>
                     </h6>
-                    <br>
+                    <br><br>
                     <div class="contact-part">
                         <div class="info-part">
                             <h4>Assinale:</h4>
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="acessibilidade[Escada acessivel]" value="0" checked/>
-                        <label class="form-check-label">Meu estabelecimento não tem escadas ou tem mas não segue nenhuma norma.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Escada acessivel]" value="0" checked id="press21"/>
+                        <label class="form-check-label" for="press21">Meu estabelecimento não tem escadas ou tem mas não segue nenhuma norma.</label>
                         <br>
-                        <input class="form-check-input" type="radio" name="acessibilidade[Escada acessivel]" value="1" />
-                        <label class="form-check-label">Meu estabelecimento tem escadas e segue as normas.</label>
+                        <input class="form-check-input" type="radio" name="acessibilidade[Escada acessivel]" value="1" id="press22"/>
+                        <label class="form-check-label" for="press22">Meu estabelecimento tem escadas e segue as normas.</label>
                         <br>
                     </div>
                 </div>
@@ -487,11 +485,11 @@
                     </div>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="acessibilidade[Apoiador]" value="0" checked/>
-                    <label class="form-check-label">Meu estabelecimento não tem maçanetas, barras antipânico e puxadores ou tem mas não segue nenhuma norma.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Apoiador]" value="0" checked id="press23"/>
+                    <label class="form-check-label" for="press23">Meu estabelecimento não tem maçanetas, barras antipânico e puxadores ou tem mas não segue nenhuma norma.</label>
                     <br>
-                    <input class="form-check-input" type="radio" name="acessibilidade[Apoiador]" value="1" />
-                    <label class="form-check-label">Meu estabelecimento tem maçanetas, barras antipânico e puxadores e segue as normas.</label>
+                    <input class="form-check-input" type="radio" name="acessibilidade[Apoiador]" value="1" id="press24"/>
+                    <label class="form-check-label" for="press24">Meu estabelecimento tem maçanetas, barras antipânico e puxadores e segue as normas.</label>
                     <br>
                 </div>
             </div>

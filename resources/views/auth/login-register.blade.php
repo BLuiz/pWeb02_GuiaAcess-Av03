@@ -97,12 +97,8 @@
                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                     </label>
 
-                    <div class="flex items-center justify-end mt-4">
-                        <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                            {{ __('Já possui uma conta?') }}
-                        </a>
-                        <br>
-                    <button class="btn btn-second">{{ __('Registrar') }}</button>
+                    <div class="flex items-center justify-end ">
+                    <button class="btn btn-second">{{ __('Criar') }}</button>
                     </div>
                 </form>
             </div>\
@@ -124,9 +120,12 @@
         @csrf
 
         <!-- Email Address -->
-        <label class="label-input" >
+        <label class="label-input" id="testeind">
             <i class="far fa-envelope icon-modify"></i>
-            <input placeholder="Email" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <input placeholder="Email" id="email" class="block mt-1 w-full" 
+            type="email" 
+            name="email" :value="old('email')" 
+            required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </label>
 
@@ -144,7 +143,7 @@
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
+                <a class="password" href="{{ route('password.request') }}">
                     {{ __('Esqueceu sua senha?') }}
                 </a>
             @endif
@@ -157,8 +156,8 @@
         </div>
     </div>
     <div id="snackbar"></div>
-    <script src="./assets/login/login.js"></script>
-    <script src="./assets/login/snackbar.js"></script>
+    <script src="{{ url('assets/login/login.js')}}"></script>
+    <script src="{{ url('assets/login/snackbar.js')}}"></script>
 
     <!-- VLIBRAS PLUGIN -->
   <div vw class="enabled">
