@@ -12,9 +12,10 @@
                 <h2>O melhor sistema para encontrar os melhores locais com acessibilidade!</h2>
 
                 <!-- ======= SearchBt ======= -->
-                <form action="#" class="form-search d-flex align-items-stretch mb-3 teste1" data-aos="fade-up" data-aos-delay="200">
-                <input type="text" class="form-control" placeholder="Onde você quer ir?">
-                <button type="submit" class="btn btn-primary">Buscar</button>
+                <form action="{{ route('local.search') }}" class="form-search d-flex align-items-stretch mb-3 teste1" data-aos="fade-up" data-aos-delay="200">
+                    <input class="form-control" type="hidden" name="campo" value="nome">
+                    <input class="form-control" type="text" name="valor" placeholder="Pesquisar" />
+                    <button type="submit" class="btn btn-primary">Buscar</button>
                 </form>
                 <!-- ======= End SearchBt ======= -->
 

@@ -58,6 +58,7 @@
                     <h3><a href="{{ action('App\Http\Controllers\LocalController@detalhe', $item->id) }}" class="stretched-link">{{ $item->nome }}</a></h3>
                     <p>{{ $item->descricao }} <br><br>
                     <strong>Endereço:</strong> {{ $item->coordenada }}</p>
+                    <strong style="margin-left: 30px">Telefone:</strong><p style="margin-left: 02px"> {{ $item->telefone }}</p>
                 </div>
             </div>
         @endforeach
