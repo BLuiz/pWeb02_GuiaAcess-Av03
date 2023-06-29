@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-2">
                 <select name="campo" class="form-select">
-                    <option value="nome">Nota</option>
+                    <option value="nota">Nota</option>
                 </select>
             </div>
             <div class="col-4">

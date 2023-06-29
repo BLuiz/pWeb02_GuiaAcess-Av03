@@ -29,7 +29,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/local') }}">Catálogo</a></li>
                             <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\LocalController@create') }}">Participe</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Mapa?</a></li>
+                            <!--<li><a class="dropdown-item disabled" href="#">Mapa?</a></li>-->
                         </ul>
                     </li>
 
@@ -40,8 +40,10 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('/suporte') }}">FAQ</a></li>
                             <li><a class="dropdown-item" href="{{ url('/feedback') }}">Feedback</a></li>
+                            <!--
                             <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\SuporteController@create') }}"> Contato</a></li>
                             <li><a class="dropdown-item" href="{{ action('App\Http\Controllers\FeedbackController@create') }}"> Avaliação</a></li>
+                            -->
                         </ul>
                     </li>
 

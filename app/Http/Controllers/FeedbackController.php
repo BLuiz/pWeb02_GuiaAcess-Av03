@@ -146,23 +146,16 @@ class FeedbackController extends Controller
 
     function search(Request $request)
     {
-        $pesquisa = ['nota', 'avaliacao', 'local_id', 'user_id'];
-        $all = 0;
-        foreach($pesquisa as $item){
-            if ($request->campo == $item) {
-                $feedbacks = Local::where(
-                    $item,
-                    'like',
-                    '%' . $request->valor . '%'
-                )->get();
-                $all++;
-            }
-        }
-        if($all=0){
-            $feedbacks = Local::all();
+        $feedbacks = Feedback::where(
+            $request->campo,
+            'like',
+            '%' . $request->valor . '%'
+        )->get();
+
+        if(empty($feedbacks)){
+            $feedbacks = Feedback::all();
         }
 
-        //dd($feedbacks);
         return view('FeedbackList')->with(['feedbacks' => $feedbacks]);
     }
 }

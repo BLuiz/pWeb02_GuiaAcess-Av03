@@ -143,19 +143,13 @@ class LocalController extends Controller
 
     function search(Request $request)
     {
-        $pesquisa = ['nome', 'telefone', 'descricao', 'coordenada' /*'acessibilidade'*/];
-        $all = 0;
-        foreach($pesquisa as $item){
-            if ($request->campo == $item) {
-                $locals = Local::where(
-                    $item,
-                    'like',
-                    '%' . $request->valor . '%'
-                )->get();
-                $all++;
-            }
-        }
-        if($all=0){
+        $locals = Local::where(
+            $request->campo,
+            'like',
+            '%' . $request->valor . '%'
+        )->get();
+
+        if(empty($locals)){
             $locals = Local::all();
         }
 

@@ -124,19 +124,13 @@ class SuporteController extends Controller
 
     function search(Request $request)
     {
-        $pesquisa = ['nome', 'email', 'assunto'];
-        $all = 0;
-        foreach($pesquisa as $item){
-            if ($request->campo == $item) {
-                $suportes = Suporte::where(
-                    $item,
-                    'like',
-                    '%' . $request->valor . '%'
-                )->get();
-                $all++;
-            }
-        }
-        if($all=0){
+        $suportes = Suporte::where(
+            $request->campo,
+            'like',
+            '%' . $request->valor . '%'
+        )->get();
+
+        if(empty($suportes)){
             $suportes = Suporte::all();
         }
 

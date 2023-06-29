@@ -138,23 +138,16 @@ class UsuarioController extends Controller
 
     function search(Request $request)
     {
-        $pesquisa = ['nome', 'telefone', 'email', 'categoria_id'];
-        $all = 0;
-        foreach($pesquisa as $item){
-            if ($request->campo == $item) {
-                $usuarios = Usuario::where(
-                    $item,
-                    'like',
-                    '%' . $request->valor . '%'
-                )->get();
-                $all++;
-            }
-        }
-        if($all=0){
+        $usuarios = Usuario::where(
+            $request->campo,
+            'like',
+            '%' . $request->valor . '%'
+        )->get();
+
+        if(empty($usuarios)){
             $usuarios = Usuario::all();
         }
 
-        //dd($usuarios);
         return view('UsuarioList')->with(['usuarios' => $usuarios]);
     }
 }
