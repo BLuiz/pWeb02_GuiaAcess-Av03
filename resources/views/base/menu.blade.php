@@ -75,9 +75,9 @@
                                     <a class="dropdown-item" href="#"> <i class='fas fa-user-cog'></i> Perfil</a>   <!--Página de perfil?-->
                                     <a class="dropdown-item" href="#"><i class='fas fa-cog'></i> Configurações</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('login-register') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class='fas fa-sign-out-alt'></i> {{ __('Logout') }}
-                                    </a>
+                                    </a>        {{-- rota modificada de logout para login-register --}}
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
